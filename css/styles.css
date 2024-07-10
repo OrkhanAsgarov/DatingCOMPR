@@ -25,6 +25,42 @@ a {
   overflow: hidden;
 }
 
+.hover-mobile {
+  display: none;
+  position: absolute;
+}
+
+.hover-mobile img {
+  width: 100%;
+}
+
+.mobile-press{
+  right: 0;
+  top: 0;
+  width: 239.536px;
+  height: 276.866px;
+  transform: rotate(-17.926deg);
+  flex-shrink: 0;
+}
+
+.mobile-about{
+  left: 0;
+  bottom: 0;
+  width: 251.856px;
+height: 263.356px;
+transform: rotate(11.816deg);
+flex-shrink: 0;
+}
+
+.mobile-produce{
+  right: 0;
+  bottom: 0;
+  width: 179.63px;
+  height: 209.209px;
+  transform: rotate(15.383deg);
+  flex-shrink: 0;
+}
+
 .mainHeader {
   display: flex;
   align-items: center;
@@ -269,10 +305,16 @@ footer nav ul li a {
 
 /* iPhone 8 için stil */
 @media only screen and (max-width: 750px) {
+  .container {
+    position: relative;
+  }
+
+ 
+
   .mainHeader h1 {
     width: 168px;
     height: 50px;
-    margin: 21px 0 0 24px;
+    margin: 10px 0 0 10px;
   }
 
   .home {
