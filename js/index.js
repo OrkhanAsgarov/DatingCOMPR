@@ -27,18 +27,31 @@ document.addEventListener('DOMContentLoaded', () => {
     let hoverTimeout;
 
     hoverTriggers.forEach(trigger => {
+        console.log("Hover trigger bulundu", trigger);
         const hoverImage = trigger.nextElementSibling; // Bir sonraki eleman hover image olmalı
-        trigger.addEventListener('mouseover', () => {
-            clearTimeout(hoverTimeout);
-            const imgUrl = trigger.getAttribute('data-hover');
-            hoverImage.style.backgroundImage = `url(${imgUrl})`;
-            hoverImage.style.display = 'block';
-        });
 
-        trigger.addEventListener('mouseout', () => {
-            hoverTimeout = setTimeout(() => {
-                hoverImage.style.display = 'none';
-            }, 100); // 100ms gecikme ekleyin
-        });
+        if (window.innerWidth > 750) { // Sadece masaüstü görünümünde hover olaylarını ekle
+            trigger.addEventListener('mouseover', (event) => {
+                clearTimeout(hoverTimeout);
+                const imgUrl = trigger.getAttribute('data-hover');
+                hoverImage.style.backgroundImage = `url(${imgUrl})`;
+                hoverImage.style.display = 'block';
+            });
+
+            trigger.addEventListener('mouseout', () => {
+                hoverTimeout = setTimeout(() => {
+                    hoverImage.style.display = 'none';
+                }, 100); // 100ms gecikme ekleyin
+            });
+        }
+
+        // About linkine tıklama olayını ekle
+        if (trigger.getAttribute('href') === 'about.html') {
+            trigger.addEventListener('click', (event) => {
+                console.log("Linkine tıklandı:", trigger.getAttribute('href'));
+                event.preventDefault(); // Varsayılan davranışı engelleme
+                window.location.href = trigger.getAttribute('href');
+            });
+        }
     });
 });

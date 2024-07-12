@@ -1,0 +1,323 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Zilla Slab', sans-serif;
+  height: 100%;
+  width: 100%;
+  color: #000;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  z-index: 10;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background: #fff;
+  text-align: center;
+  color: black;
+  overflow: hidden;
+}
+
+.mainHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  background-color: transparent;
+}
+
+.mainHeader h1 {
+  display: flex;
+  width: 301px;
+  height: 74px;
+  flex-shrink: 0;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+  flex-shrink: 0;
+  margin: 22px 0;
+}
+
+.mainHeader .homeDiv {
+  height: 74px;
+  margin: 22px 0;
+}
+
+.mainHeader h1 a {
+  color: #204165;
+  font-family: "Zilla Slab";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 26px */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.home {
+  color: #204165;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 855.115px;
+  height: 600px;
+  flex-shrink: 0;
+  background: url('/images/about/IndexCardsCropped1.png') no-repeat center center;
+  background-size: cover;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.arrowDiv{
+  width: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  user-select: none;
+  
+  /* background-color: transparent; */
+  border: none;
+
+}
+
+.prev {
+  background: url('/icons/LeftArrowForSlayd.svg') no-repeat center center;
+}
+
+.next{
+  background: url('/icons/RightArrowForSlayd.svg') no-repeat center center;
+}
+
+/* .prev img, .next img {
+  width: 60px;
+  height: 60px;
+} */
+
+.mySlides .numbertext {
+  color: #204165;
+  font-family: Gaegu;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%; /* 60.9px */
+  position: absolute;
+  top: 53px;
+  left: 67px;
+  transition: transform 0.3s ease;
+  transform: rotate(-2deg);
+}
+
+.mySlides .slideText{
+  width: 636.862px;
+  height: 375.638px;
+  color: #204165;
+  font-family: Gaegu;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%; /* 33.35px */
+  position: absolute;
+  top: 112px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  text-align: start;
+  transition: transform 0.3s ease;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+footer {
+  padding: 20px 0 48px;
+  display: flex;
+  justify-content: center;
+}
+
+footer nav ul {
+  list-style-type: none;
+  padding: 0;
+  width: 667px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer nav ul li {
+ display: inline-block;
+  
+  
+}
+
+footer nav ul li a {
+  color: #204165;
+
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 22.4px */
+letter-spacing: 1.44px;
+text-transform: uppercase;
+}
+
+/* @-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+} */
+
+@media only screen and (max-width: 750px) {
+
+  .container {
+    position: relative;
+  }
+
+  .mainHeader {
+    width: 159.615px;
+    height: 50px;
+    padding: 0;
+    position: absolute;
+    top: 27px;
+    left: 30px;
+  }
+
+  .mainHeader h1 {
+    margin: 0;
+    height: 100%;
+    width: 160px;
+  }
+
+  .mainHeader h1 a {
+    font-size: 16px;
+  }
+  .homeDiv {
+    display: none;
+  }
+  .home {
+    display: none;
+  }
+
+
+ .slideshow-container {
+  width: 462.189px;
+  height: 639.856px;
+ }
+
+
+ .mySlides{
+  background: url('/images/about/iStock.png') no-repeat center center;
+  background-size: 85%;
+  width: 462.189px;
+  height: 639.856px;
+  position: absolute;
+  top: 18px;
+ }
+
+ 
+
+ .arrowDiv {
+  z-index: 15;
+}
+
+  .prevDiv {
+    position: absolute;
+    left:50px;
+    bottom: 65px;
+  }
+
+  .nextDiv {
+    position: absolute;
+    right:50px;
+    bottom: 65px;
+  }
+
+  .mySlides .numbertext {
+    width: 360.509px;
+height: 52.564px;
+font-size: 46px;
+top: 80px;
+left: 70px;
+text-align: start;
+  }
+
+  .mySlides .slideText {
+    width: 305.505px;
+  height: 281.37px;
+  font-size: 20px;
+  line-height: 155%;
+   }
+
+  footer {
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  footer nav ul {
+    display: flex;
+    align-items: flex-start;
+    gap: 51px;
+    width: 326px;
+    height: 15px;
+    padding: 0px 6.398px 24px 6.399px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+}

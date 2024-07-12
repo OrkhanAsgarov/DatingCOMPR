@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Zilla Slab', serif;
   height: 100%;
   width: 100%;
   color: #fff;
@@ -11,6 +11,8 @@ body, html {
 a {
   text-decoration: none;
   color: #fff;
+   position: relative; /* z-index ile çalışabilmesi için gerekli */
+  z-index: 10;
 }
 
 .container {
@@ -263,6 +265,7 @@ footer nav ul li a {
   letter-spacing: 1.44px;
   padding: 10px 5px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .hover-image {
