@@ -15,8 +15,11 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let totalSlides = slides.length;
+
   let prevButton = document.querySelector(".prev");
   let nextButton = document.querySelector(".next");
+  let prevMobilButton = document.querySelector(".prevMobil .prev");
+  let nextMobilButton = document.querySelector(".nextMobil .next");
 
   if (n > totalSlides) {slideIndex = 1}
   if (n < 1) {slideIndex = totalSlides}
@@ -30,22 +33,26 @@ function showSlides(n) {
   let rotateDegree = getRandomRotation();
   slides[slideIndex - 1].style.transform = `rotate(${rotateDegree}deg)`;
   if (window.innerWidth > 750) {
-  slides[slideIndex - 1].querySelector(".numbertext").innerText = `ABOUT (${slideIndex} of ${totalSlides})`;
+    slides[slideIndex - 1].querySelector(".numbertext").innerText = `ABOUT (${slideIndex} of ${totalSlides})`;
   } else {
     slides[slideIndex - 1].querySelector(".numbertext").innerText = `ABOUT ${slideIndex} / ${totalSlides}`;
   }
 
   // Hide or show buttons
   if (slideIndex === 1) {
-    prevButton.style.display = "none";
+    prevButton.classList.add("disabled");
+    prevMobilButton.classList.add("disabled");
   } else {
-    prevButton.style.display = "block";
+    prevButton.classList.remove("disabled");
+    prevMobilButton.classList.remove("disabled");
   }
 
   if (slideIndex === totalSlides) {
-    nextButton.style.display = "none";
+    nextButton.classList.add("disabled");
+    nextMobilButton.classList.add("disabled");
   } else {
-    nextButton.style.display = "block";
+    nextButton.classList.remove("disabled");
+    nextMobilButton.classList.remove("disabled");
   }
 }
 

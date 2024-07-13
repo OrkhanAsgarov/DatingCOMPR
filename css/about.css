@@ -1,11 +1,13 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  font-family: 'Zilla Slab', sans-serif;
-  height: 100%;
+  font-family: "Zilla Slab", sans-serif;
+  height: 100vh;
   width: 100%;
-  color: #000;
+  color: #204165;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 a {
@@ -18,11 +20,11 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
   background: #fff;
   text-align: center;
-  color: black;
-  overflow: hidden;
+  color: #204165;
+  /* overflow: hidden; */
 }
 
 .mainHeader {
@@ -42,12 +44,12 @@ a {
   align-items: start;
   text-align: start;
   flex-shrink: 0;
-  margin: 22px 0;
+  margin-top: 22px;
 }
 
 .mainHeader .homeDiv {
   height: 74px;
-  margin: 22px 0;
+  margin-top: 22px;
 }
 
 .mainHeader h1 a {
@@ -73,7 +75,7 @@ a {
 }
 
 main {
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,46 +96,47 @@ main {
   width: 855.115px;
   height: 600px;
   flex-shrink: 0;
-  background: url('/images/about/IndexCardsCropped1.png') no-repeat center center;
+  background: url("/images/about/IndexCardsCropped1.png") no-repeat center center;
   background-size: cover;
-  background-size: cover;
-  background-position: center;
   position: relative;
   transition: transform 0.3s ease;
 }
 
-.arrowDiv{
+.arrowDiv {
   width: 60px;
   margin: 0;
   padding: 0;
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   width: 60px;
   height: 60px;
   transition: 0.6s ease;
   border-radius: 50%;
   user-select: none;
-  
-  /* background-color: transparent; */
-  border: none;
-
+  background-color: #029d7e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .prev {
-  background: url('/icons/LeftArrowForSlayd.svg') no-repeat center center;
+  background: url("/icons/LeftArrowForSlayd.svg") no-repeat center center;
 }
 
-.next{
-  background: url('/icons/RightArrowForSlayd.svg') no-repeat center center;
+.next {
+  background: url("/icons/RightArrowForSlayd.svg") no-repeat center center;
 }
 
-/* .prev img, .next img {
-  width: 60px;
-  height: 60px;
-} */
+/* Disabled button styles */
+.prev.disabled,
+.next.disabled {
+  background-color: #204165;
+  pointer-events: none;
+}
 
 .mySlides .numbertext {
   color: #204165;
@@ -149,7 +152,7 @@ main {
   transform: rotate(-2deg);
 }
 
-.mySlides .slideText{
+.mySlides .slideText {
   width: 636.862px;
   height: 375.638px;
   color: #204165;
@@ -174,8 +177,12 @@ main {
   animation-duration: 1.5s;
 }
 
+.mobilArrow {
+  display: none;
+}
+
 footer {
-  padding: 20px 0 48px;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
 }
@@ -191,23 +198,131 @@ footer nav ul {
 }
 
 footer nav ul li {
- display: inline-block;
-  
-  
+  display: inline-block;
 }
 
 footer nav ul li a {
   color: #204165;
 
-text-align: center;
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 140%; /* 22.4px */
-letter-spacing: 1.44px;
-text-transform: uppercase;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
 }
+
+@media only screen and (max-width: 750px) {
+  .container {
+    position: relative;
+  }
+
+  .mainHeader {
+    position: absolute;
+    top: 27px;
+    left: 30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mainHeader h1 {
+    width: 320.192px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mainHeader h1 a {
+    width: 159.615px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .mainHeader .homeDiv {
+    display: none;
+  }
+
+  main {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    height: 100%;
+  }
+
+  .slideshow-container {
+    position: absolute;
+    width: 462.189px;
+    height: 639.856px;
+  }
+
+  .arrowDiv {
+    display: none;
+  }
+
+  .mySlides {
+    width: 462.189px;
+    /* background: url(/images/about/iStock.png) no-repeat center center; */
+  }
+
+  .mySlides .slideText {
+    width: 305.505px;
+    height: 281.37px;
+    /* left: 66px; */
+    font-size: 20px;
+    line-height: 155%; /* 31px */
+  }
+
+  .mobilArrow {
+    display: block;
+    position: absolute;
+    bottom: 72px;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    z-index: 60;
+  }
+
+  .prevMobil {
+    left: 24px;
+  }
+
+  .nextMobil {
+    right: 24px;
+  }
+
+  .prev,
+  .next {
+    display: inline-block;
+  }
+
+  footer {
+    z-index: 55;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  footer nav ul {
+    display: flex;
+    margin: 0;
+    width: 370px;
+    gap: 51px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Mobil görünümde disabled buton */
+  .prev.disabled,
+  .next.disabled {
+    background-color: #029D7E;
+    pointer-events: none;
+  }
+}
+
 
 /* @-webkit-keyframes fade {
   from {opacity: .4}
@@ -219,19 +334,18 @@ text-transform: uppercase;
   to {opacity: 1}
 } */
 
-@media only screen and (max-width: 750px) {
+/* @media only screen and (max-width: 750px) {
 
   .container {
     position: relative;
+    overflow: hidden;
   }
 
   .mainHeader {
     width: 159.615px;
     height: 50px;
     padding: 0;
-    position: absolute;
-    top: 27px;
-    left: 30px;
+   
   }
 
   .mainHeader h1 {
@@ -250,6 +364,11 @@ text-transform: uppercase;
     display: none;
   }
 
+  main {
+    position: absolute;
+    top: 18px;
+  }
+
 
  .slideshow-container {
   width: 462.189px;
@@ -259,11 +378,13 @@ text-transform: uppercase;
 
  .mySlides{
   background: url('/images/about/iStock.png') no-repeat center center;
-  background-size: 85%;
+  background-size: cover;
   width: 462.189px;
   height: 639.856px;
   position: absolute;
-  top: 18px;
+  top: 29.16px; 
+  left: -36.73px; 
+  transform-origin: 0 0;
  }
 
  
@@ -274,13 +395,13 @@ text-transform: uppercase;
 
   .prevDiv {
     position: absolute;
-    left:50px;
+    left:24px;
     bottom: 65px;
   }
 
   .nextDiv {
     position: absolute;
-    right:50px;
+    right:24px;
     bottom: 65px;
   }
 
@@ -301,11 +422,8 @@ text-align: start;
    }
 
   footer {
+    z-index: 55;
     padding: 0;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   footer nav ul {
@@ -320,4 +438,4 @@ text-align: start;
     margin: 0;
   }
 
-}
+} */
