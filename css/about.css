@@ -277,7 +277,7 @@ footer nav ul li a {
   .mobilArrow {
     display: block;
     position: absolute;
-    bottom: 72px;
+    top: 80%;
     width: 60px;
     height: 60px;
     margin: 0;
@@ -301,7 +301,7 @@ footer nav ul li a {
   footer {
     z-index: 55;
     position: absolute;
-    bottom: 0;
+    top: 90%;
     left: 50%;
     transform: translateX(-50%);
   }
