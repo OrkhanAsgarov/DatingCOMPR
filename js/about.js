@@ -20,6 +20,8 @@ function showSlides(n) {
   let nextButton = document.querySelector(".next");
   let prevMobilButton = document.querySelector(".prevMobil .prev");
   let nextMobilButton = document.querySelector(".nextMobil .next");
+  let leftHomeButton = document.querySelector(".prevMobil .leftHome");
+  let rightHomeButton = document.querySelector(".nextMobil .rightHome");
 
   if (n > totalSlides) {slideIndex = 1}
   if (n < 1) {slideIndex = totalSlides}
@@ -34,25 +36,40 @@ function showSlides(n) {
   slides[slideIndex - 1].style.transform = `rotate(${rotateDegree}deg)`;
   if (window.innerWidth > 750) {
     slides[slideIndex - 1].querySelector(".numbertext").innerText = `ABOUT (${slideIndex} of ${totalSlides})`;
+    
+
+
   } else {
     slides[slideIndex - 1].querySelector(".numbertext").innerText = `ABOUT ${slideIndex} / ${totalSlides}`;
+
+    if (slideIndex === 1) {
+      leftHomeButton.style.display = "block";
+    }
+    else if (slideIndex === totalSlides){
+      rightHomeButton.style.display = "block";
+    } else {
+      leftHomeButton.style.display = "none";
+      rightHomeButton.style.display = "none";
+    }
   }
 
   // Hide or show buttons
   if (slideIndex === 1) {
-    prevButton.classList.add("disabled");
-    prevMobilButton.classList.add("disabled");
+    prevButton.style.display = "none";
+    prevMobilButton.style.display = "none";
+    
   } else {
-    prevButton.classList.remove("disabled");
-    prevMobilButton.classList.remove("disabled");
+    prevButton.style.display = "block";
+    prevMobilButton.style.display = "block";
   }
 
   if (slideIndex === totalSlides) {
-    nextButton.classList.add("disabled");
-    nextMobilButton.classList.add("disabled");
+    nextButton.style.display = "none";
+    nextMobilButton.style.display = "none";
+    
   } else {
-    nextButton.classList.remove("disabled");
-    nextMobilButton.classList.remove("disabled");
+    nextButton.style.display = "block";
+    nextMobilButton.style.display = "block";
   }
 }
 

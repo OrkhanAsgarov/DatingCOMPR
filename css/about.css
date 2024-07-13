@@ -12,7 +12,7 @@ html {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #204165;
   z-index: 10;
 }
 
@@ -23,13 +23,12 @@ a {
   height: 100%;
   background: #fff;
   text-align: center;
-  color: #204165;
   /* overflow: hidden; */
 }
 
 .mainHeader {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   padding: 0 32px;
   background-color: transparent;
@@ -44,16 +43,11 @@ a {
   align-items: start;
   text-align: start;
   flex-shrink: 0;
-  margin-top: 22px;
-}
-
-.mainHeader .homeDiv {
-  height: 74px;
+  margin: 0;
   margin-top: 22px;
 }
 
 .mainHeader h1 a {
-  color: #204165;
   font-family: "Zilla Slab";
   font-size: 20px;
   font-style: normal;
@@ -63,8 +57,12 @@ a {
   text-transform: uppercase;
 }
 
+.mainHeader .homeDiv {
+  height: 74px;
+  margin-top: 22px;
+}
+
 .home {
-  color: #204165;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -123,18 +121,18 @@ main {
   justify-content: center;
 }
 
-.prev {
+.prev, .leftHome {
   background: url("/icons/LeftArrowForSlayd.svg") no-repeat center center;
 }
 
-.next {
+.next, .rightHome {
   background: url("/icons/RightArrowForSlayd.svg") no-repeat center center;
 }
 
 /* Disabled button styles */
 .prev.disabled,
 .next.disabled {
-  background-color: #204165;
+  background-color: #029D7E;
   pointer-events: none;
 }
 
@@ -293,6 +291,20 @@ footer nav ul li a {
     right: 24px;
   }
 
+  .leftHome, .rightHome {
+    display: none;
+    background-color: #029D7E;
+    height: 60px;
+    width: 60px;
+  }
+
+   /* Mobil görünümde disabled buton */
+   .leftHome.disabled,
+   .rightHome.disabled {
+     background-color: #029D7E;
+     
+   }
+
   .prev,
   .next {
     display: inline-block;
@@ -315,12 +327,7 @@ footer nav ul li a {
     justify-content: center;
   }
 
-  /* Mobil görünümde disabled buton */
-  .prev.disabled,
-  .next.disabled {
-    background-color: #029D7E;
-    pointer-events: none;
-  }
+ 
 }
 
 
