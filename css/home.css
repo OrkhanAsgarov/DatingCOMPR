@@ -1,0 +1,264 @@
+
+.container {
+  background: url("/images/mainPageBackground.png") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hover-mobile {
+  display: none;
+  position: absolute;
+}
+
+.hover-mobile img {
+  width: 100%;
+}
+
+.mobile-press {
+  right: -5%;
+  top: -5%;
+  width: 239.536px;
+  height: 276.866px;
+  transform: rotate(-17.926deg);
+  flex-shrink: 0;
+}
+
+.mobile-about {
+  left: -10%;
+  bottom: -5%;
+  width: 251.856px;
+  height: 263.356px;
+  transform: rotate(11.816deg);
+  flex-shrink: 0;
+}
+
+.mobile-produce {
+  right: -5%;
+  bottom: -8%;
+  width: 179.63px;
+  height: 209.209px;
+  transform: rotate(15.383deg);
+  flex-shrink: 0;
+}
+
+
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 150px;
+}
+
+.DC_Title {
+  width: 735px;
+  height: 173px;
+  flex-shrink: 0;
+  /* background: url('/images/DatingComprehension_Title1.png') lightgray 50% / cover no-repeat; */
+  background-color: transparent;
+}
+
+.DC_Title img {
+  width: 100%;
+}
+
+main p {
+  color: #e3fcf8;
+  text-align: center;
+  width: 340px;
+  height: 52px;
+  margin-bottom: 1.5rem;
+}
+
+main p span {
+  /* Header 3 */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%; /* 26.1px */
+}
+
+.location-div {
+  width: 320px;
+  border-radius: 8px;
+  background: rgba(241, 243, 243, 0.9);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.98px;
+  text-transform: uppercase;
+}
+
+.location-button {
+  width: 100%;
+  height: 48px;
+  flex-shrink: 0;
+  cursor: pointer;
+  color: #204165;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 0.98px;
+  text-transform: uppercase;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.location-button .icon {
+  display: inline-block;
+  width: 15px;
+  height: 7px;
+  background: url("/icons/Vector1.svg") no-repeat center center;
+  stroke-width: 3px;
+  stroke: rgba(32, 65, 101, 0.8);
+  transition: transform 0.3s ease;
+}
+
+.icon-rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.dropdown-menu.show {
+  display: block;
+  max-height: 192px;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  height: 48px;
+  flex-shrink: 0;
+  color: #204165;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 0 14px;
+  text-align: start;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu ul li:hover {
+  background-color: rgba(2, 157, 126, 0.2);
+}
+
+.dropdown-menu ul li:last-child {
+  border-bottom: none;
+}
+
+footer {
+  position: relative;
+}
+
+footer nav ul li {
+  position: relative;
+}
+
+footer nav ul li a {
+  color: #e3fcf8;
+}
+
+.hover-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.hover-image.hover-about {
+  position: absolute;
+  width: 302px;
+  height: 316px;
+  bottom: 100%;
+  left: 50%; /* Görseli ortalamak için */
+  transform: translate(-50%, 20%);
+  flex-shrink: 0;
+}
+
+.hover-image.hover-press {
+  position: absolute;
+  width: 391.16px;
+  height: 452.12px;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-47%, 47%) rotate(-2.348deg);
+  flex-shrink: 0;
+}
+
+.hover-image.hover-produce {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 241.837px;
+  height: 281.66px;
+  transform: translate(-47%, 25%) rotate(15.383deg);
+  flex-shrink: 0;
+}
+
+/* iPhone 8 için stil */
+@media only screen and (max-width: 750px) {
+  .container {
+    position: relative;
+  }
+
+  main{
+    padding-top: 117px;
+  }
+
+  .mainHeader h1 {
+    width: 168px;
+    height: 50px;
+    margin: 10px 0 0 10px;
+  }
+
+  .home {
+    display: none;
+  }
+
+  .DC_Title {
+    width: 327px;
+    height: 94px;
+  }
+
+  /* main p {
+    width: 327px;
+  } */
+  main p span {
+    font-size: 17px;
+    line-height: 140%; /* 23.8px */
+  }
+
+  .location-div {
+    width: 90%; /* Ekran genişliğine uyum sağlar */
+  }
+
+  footer {
+    padding: 14px 0;
+  }
+
+  footer nav ul {
+    width: 80vw;
+  }
+}

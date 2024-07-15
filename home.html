@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dating Comprehension</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Inter:wght@400;600&family=Zilla+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div class="container secondaryColor">
+        <div class="hover-mobile mobile-about">
+            <img src="/images/gif/about.gif" alt="">
+        </div>
+        <div class="hover-mobile mobile-press">
+            <img src="/images/gif/press.gif" alt="">
+        </div>
+        <div class="hover-mobile mobile-produce">
+            <img src="/images/gif/produce.gif" alt="">
+        </div>
+        <header class="mainHeader">
+            <h1><a href="#" class="secondaryColor">Dating <br> Comprehension</a></h1>
+            <div class="homeDiv">
+                <a class="home secondaryColor" href="index.html">HOME</a>
+            </div>
+        </header>
+        <main>
+            <div class="DC_Title">
+                <img src="/images/DatingComprehension_Title1.png" alt="">
+            </div>
+            <p>
+                <span>Your fave reality dating show. <br> Only live, interactive, and totally spoofy.</span>
+            </p>
+            <div class="location-div">
+                <button class="location-button" onclick="toggleMenu()">
+                    Show Locations
+                    <i class="icon"></i>
+                </button>
+                <div id="dropdown-menu" class="dropdown-menu">
+                    <ul>
+                        <li><a class="primaryColor">IMAGINATION THEATRE, NEW YORK</a></li>
+                        <li><a class="primaryColor">APOLLO THEATER, CHICAGO</a></li>
+                        <li><a class="primaryColor">GEFFEN PLAYHOUSE, LOS ANGELES</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li class="hover-container">
+                        <a href="about.html" class="hover-trigger" data-hover="/images/gif/about.gif" onclick="window.location.href='about.html'">About</a>
+                        <div class="hover-image hover-about"></div>
+                    </li>
+                    <li class="hover-container">
+                        <a href="press.html" class="hover-trigger" data-hover="/images/gif/press.gif" onclick="window.location.href='press.html'">Press</a>
+                        <div class="hover-image hover-press"></div>
+                    </li>
+                    <li class="hover-container">
+                        <a href="produce.html" class="hover-trigger" data-hover="/images/gif/produce.gif" onclick="window.location.href='produce.html'">Produce</a>
+                        <div class="hover-image hover-produce"></div>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+    <script src="/js/home.js"></script>
+</body>
+</html>
