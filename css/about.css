@@ -1,7 +1,4 @@
-body,
-html {
-  overflow: hidden;
-}
+
 
 .container {
   background: #fff;
@@ -12,6 +9,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 /* Slideshow container */

@@ -260,16 +260,17 @@ footer nav ul li a {
     display: inline-block;
   }
 
-  /* main p {
+  main p {
     width: 327px;
-  } */
+    margin: 8px 0 14px 0;
+  }
   main p span {
     font-size: 17px;
     line-height: 140%; /* 23.8px */
   }
 
   .location-div {
-    width: 90%; /* Ekran genişliğine uyum sağlar */
+    width: 327px; /* Ekran genişliğine uyum sağlar */
   }
 
   footer nav ul {
