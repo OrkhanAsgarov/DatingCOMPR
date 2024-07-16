@@ -64,6 +64,10 @@ main {
   width: 100%;
 }
 
+.DC_Title .mobile{
+  display: none;
+}
+
 main p {
   color: #e3fcf8;
   text-align: center;
@@ -223,23 +227,37 @@ footer nav ul li a {
     position: relative;
   }
 
-  main{
-    padding-top: 117px;
+  .mainHeader {
+    padding: 0;
+    width: 100%;
+    justify-content: center;
   }
 
+  
+
   .mainHeader h1 {
-    width: 168px;
-    height: 50px;
-    margin: 10px 0 0 10px;
-  }
+    width: 327px;
+  } 
 
   .home {
     display: none;
   }
 
+  main{
+    padding-top: 117px;
+  }
+
   .DC_Title {
     width: 327px;
     height: 94px;
+  }
+
+  .DC_Title .descop{
+    display: none;
+  }
+
+  .DC_Title .mobile{
+    display: inline-block;
   }
 
   /* main p {
@@ -254,11 +272,12 @@ footer nav ul li a {
     width: 90%; /* Ekran genişliğine uyum sağlar */
   }
 
-  footer {
-    padding: 14px 0;
-  }
-
   footer nav ul {
-    width: 80vw;
-  }
+    justify-content: space-between;
+    margin: 0;
+    width: 327px;
+    margin-bottom: 24px;
+}
+
+  
 }

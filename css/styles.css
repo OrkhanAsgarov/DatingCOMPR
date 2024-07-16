@@ -111,11 +111,14 @@ footer nav ul li a {
 
 @media only screen and (max-width: 750px) {
   .mainHeader {
-    padding: 0 30px;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
   }
 
   .mainHeader h1 {
     margin-top: 27px;
+    height: 50px;
   }
 
   .mainHeader h1 a {
@@ -139,8 +142,9 @@ footer nav ul li a {
     height: 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 51px;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 24px;
   }
 
   footer nav ul li a {
