@@ -26,7 +26,7 @@ main {
 
 .calculator-screen {
   position: absolute;
-  width: 400px;
+  width: 393px;
   left: 77px;
   top: 110px;
   display: flex;
@@ -55,6 +55,8 @@ main {
 .calculator-screen .eMailDisplay {
   width: 65px;
   height: 50px;
+  margin-bottom: 24px;
+  margin-top: 13px;
 }
 
 .calculator-screen .title img,
@@ -79,11 +81,11 @@ main {
   align-items: start;
 }
 
-.calculator-container .result p {
+.calculator-container .result p,
+.calculator-container .result a {
   text-align: left;
   padding: 0;
   margin: 0;
-  color: #204165;
   font-size: 18px;
   font-family: Inter;
   font-weight: 400;
@@ -92,13 +94,114 @@ main {
 }
 
 .calculator-container .result a {
-  padding: 0;
-  margin: 0;
   color: #204165;
-  font-size: 18px;
-  font-family: Inter;
-  font-weight: 400;
   text-decoration: underline;
-  line-height: 26.1px;
-  word-wrap: break-word;
+}
+
+.mobilArrow{
+  display: none;
+}
+
+
+@media only screen and (max-width:750px) {
+  .container {
+    justify-content:start;
+  }
+  .mainHeader {
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+
+  .calculator-container {
+    width: 360px;
+    height: 468px;
+    flex-shrink: 0;
+  }
+
+  .calculator-screen {
+    display: flex;
+    position: absolute;
+    width: 254px;
+    left: 50px;
+    top: 73px;
+  }
+
+  .calculator-screen .title {
+    width: 184px;
+    height: 57px;
+  }
+
+  .calculator-screen .eMailDisplay {
+    width: 42px;
+    height: 32px;
+    margin-bottom: 16px;
+    margin-top: 9px;
+  }
+
+  .boobsScreen {
+    display: none;
+  }
+
+  .calculator-container .result {
+    display: none;
+    
+  }
+
+  .mobilResult {
+    width: 342px;
+    height: 96px;
+    border-radius: 10px;
+    padding: 25px 28px 24px 29px;
+    background: #ffc538;
+    box-sizing: border-box;
+    margin: 17px 2px 0 24px;
+    color: #204165;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    text-align: left;
+  }
+
+  .mobilResult span, .mobilResult a {
+    text-decoration: underline;
+     color: #204165;
+  }
+
+   .mobilArrow {
+    width: 346px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 24px;
+  }
+
+  .leftHome{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #029D7E;
+    
+  }
+
+  footer {
+   
+    margin: 0 18px;
+    box-sizing: border-box;
+  }
+
+   footer nav {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  footer nav ul {
+    width: 100%;
+    padding: 0 6.4px;
+    box-sizing: border-box;
+  }
 }
