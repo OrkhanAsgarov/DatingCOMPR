@@ -1,11 +1,12 @@
 let clickCount = 0;
-let isMobileActive = false; 
 
 function handleCalculatorClick() {
     const result = document.querySelector(".result");
     const mobilResult = document.querySelector(".mobilResult");
     const calculatorScreen = document.querySelector(".calculator-screen");
     const boobsScreen = document.querySelector(".boobsScreen");
+    const eMailDisplay = document.querySelector(".eMailDisplay");
+
 
     if (window.innerWidth > 750) {
         clickCount++;
@@ -16,14 +17,16 @@ function handleCalculatorClick() {
             boobsScreen.style.display = "block";
         }
     } else {
-        if (!isMobileActive) {
-            mobilResult.classList.add("active"); 
-            isMobileActive = true; 
+        if (!mobilResult.classList.contains("active")) {
+            mobilResult.classList.add("active");
+            eMailDisplay.style.display = "none";
         } else {
-            mobilResult.classList.remove("active"); 
-            isMobileActive = false; 
+            mobilResult.classList.remove("active");
+            eMailDisplay.style.display = "block";
         }
     }
 }
 
+// Removing any existing event listeners to prevent multiple triggers
+document.querySelector(".calculator-container").removeEventListener("click", handleCalculatorClick);
 document.querySelector(".calculator-container").addEventListener("click", handleCalculatorClick);
