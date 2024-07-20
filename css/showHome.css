@@ -1,0 +1,496 @@
+body,
+html {
+  height: auto;
+}
+
+.container {
+  background: #cadef7;
+  overflow: hidden;
+  justify-content: start;
+}
+
+.mainHeader {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburgerMenu {
+  display: none;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+}
+
+.leftMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 156px;
+  height: 252px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 32px;
+  bottom: 24px;
+}
+
+.menuItem {
+  width: 160px;
+  height: 42px;
+  color: #204165;
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  line-height: 22.4px;
+  letter-spacing: 1.44px;
+  word-wrap: break-word;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.showHomeContainer {
+  width: 741px;
+  height: 774px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainBox {
+  width: 712px;
+  height: 566px;
+  margin: 0;
+  border: 2px solid #204165;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.mainTitle {
+  width: 501px;
+  height: 124px;
+  text-align: center;
+  color: #204165;
+  font-size: 56px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 700;
+  letter-spacing: 1.68px;
+  margin: 32px auto 8px;
+  line-height: 61.6px;
+  word-wrap: break-word;
+}
+
+.subtitle {
+  width: 338px;
+  height: 33px;
+  text-align: center;
+  color: #204165;
+  font-size: 24px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 500;
+  margin: 0 auto 30px;
+}
+
+.separator {
+  width: 100%;
+  height: 2px;
+  border-bottom: 2px solid #204165;
+  margin-bottom: 56px;
+}
+
+.infoBox {
+  width: 469px;
+  height: 211px;
+  margin: 0 auto 72px;
+  list-style: none;
+  padding: 0;
+}
+
+.infoBox li {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: 42px;
+  gap: 6px;
+}
+
+.infoLabel {
+  display: block;
+  width: auto;
+  color: #204165;
+  font-size: 24px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 400;
+  text-align: right;
+}
+
+.infoValue {
+  display: block;
+  color: #204165;
+  padding-left: 16px;
+  font-size: 28px;
+  font-family: "Gaegu", serif;
+  font-weight: 400;
+  border-bottom: 1px solid #204165;
+  width: 100%;
+  text-align: left;
+}
+
+.nextShowContainer {
+  width: 712px;
+  height: 192px;
+  margin: 0;
+  margin-bottom: 46px;
+  border: 2px solid #204165;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.notesIcon {
+  position: absolute;
+  width: 90px;
+  height: 45px;
+  top: -2px;
+  left: -23px;
+}
+
+.notesLabel {
+  position: absolute;
+  width: 39px;
+  height: 22px;
+  color: #f1f3f3;
+  font-size: 16px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 500;
+  line-height: 22.4px;
+  word-wrap: break-word;
+  top: 4px;
+  left: -7px;
+  transform: rotate(-45deg);
+}
+
+.nextShowLabel {
+  width: 216px;
+  height: 33.5px;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 500;
+}
+
+.nextShowTime {
+  width: 424px;
+  height: 33px;
+  text-align: center;
+  font-size: 23px;
+  font-family: "Gaegu", serif;
+  font-weight: 400;
+  line-height: 33.35px;
+  word-wrap: break-word;
+}
+
+footer {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  position: relative;
+  border: 1px solid #204165;
+  opacity: 0.8;
+}
+
+.footerLeft,
+.footerRight {
+  width: 277px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+
+.footerLeft {
+  padding-left: 32px;
+}
+
+.footerRight {
+  justify-content: end;
+  gap: 10px;
+  padding-right: 16px;
+}
+
+.footerCenter {
+  width: 100%;
+  height: 42px;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #204165;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 22.4px;
+  letter-spacing: 1.44px;
+  word-wrap: break-word;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.footerButtonMobile{
+  display: none;
+}
+
+.footerButton {
+  color: #204165;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 22.4px;
+  letter-spacing: 1.44px;
+  word-wrap: break-word;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.doubleArrow {
+  width: 10px;
+  height: 16px;
+}
+
+.leftArrow {
+  background: url("/icons/doubleLeftArrow.svg") no-repeat center center;
+}
+
+.rightArrow {
+  background: url("/icons/doubleRightArrow.svg") no-repeat center center;
+}
+
+@media screen and (max-width: 750px) {
+  .mainHeader {
+    margin-bottom: 32px;
+  }
+
+  .mainHeader h1 {
+    margin-top: 23px;
+    margin-left: 16px;
+    font-size: 16px;
+    font-family: Zilla Slab;
+    font-weight: 700;
+    line-height: 20.8px;
+    letter-spacing: 0.96px;
+    word-wrap: break-word;
+  }
+
+  .hamburgerMenu {
+    display: block;
+    width: 32px;
+    height: 22px;
+    margin-right: 16px;
+  }
+
+  .leftMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: #cadef7;
+    z-index: 1000;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .menuItem {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .showHomeContainer {
+    width: 100%;
+    height: auto;
+    padding: 0 8px;
+  }
+
+  .mainBox {
+    width: 359px;
+    height: 446px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+
+  .mainTitle {
+    width: 322px;
+    height: 82px;
+    margin: 24px auto 5px;
+    font-size: 36px;
+    line-height: 41.4px;
+    letter-spacing: 1.08px;
+  }
+
+  .subtitle {
+    width: 264px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.6px;
+    letter-spacing: 0.18px;
+    margin: 0 auto 29px;
+  }
+
+  .separator {
+    margin-bottom: 31px;
+  }
+
+  .infoBox {
+    width: 305px;
+    height: 211px;
+    margin: 0 15.5px 41px 38px;
+  }
+
+  .infoBox li {
+    gap: 11px;
+  }
+
+
+
+  .infoLabel {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.4px;
+    letter-spacing: 0.18px;
+    word-wrap: break-word;
+  }
+
+  .infoValue {
+    font-size: 24px;
+    line-height: 26.40px;
+    word-wrap: break-word;
+}
+
+  .nextShowContainer {
+    width: 360px;
+    height: 112px;
+    padding: 21px 0 22px;
+    box-sizing: border-box;
+    margin-bottom: 37px;
+    gap: 1px;
+  }
+
+  .nextShowLabel, .nextShowTime {
+    width: 193px;
+    color: #204165;
+font-size: 19px;
+font-family: Gaegu;
+font-weight: 400;
+line-height: 23.18px;
+letter-spacing: 0.19px;
+word-wrap: break-word;
+height: auto;
+}
+
+  footer {
+    padding-top: 24px;
+    height: auto;
+   margin-bottom: 24px;
+   border: none;
+   border-top: 2px solid #204165;
+  }
+  
+  .footerLeft,
+  .footerRight {
+    width: 55px;
+    height: auto;
+  }
+  
+  .footerLeft {
+    padding-left: 23px;
+  }
+  
+  .footerRight {
+    
+    padding-right: 29px;
+  }
+  
+  .footerCenter {
+    border: none;
+    height: auto;
+    padding-left: 35px;
+      }
+  
+  .footerButtonMobile{
+    display: none;
+  }
+  
+  
+
+ 
+
+  .footerButton {
+    display: none;
+  }
+
+  .footerButtonMobile{
+    display: block;
+    color: #204165;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 600;
+    line-height: 22.4px;
+    letter-spacing: 1.44px;
+    word-wrap: break-word;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  
+  
+  .mobilicon {
+    width: 28px;
+    height: 24px;
+  }
+
+  .closeButton {
+    background: url("/icons/Exit.svg") no-repeat center center;
+  }
+
+  .arrowBack {
+    background: url("/icons/ArrowBack.svg") no-repeat center center;
+  }
+
+  .arrowForwards {
+    background: url("/icons/ArrowForwards.svg") no-repeat center center;
+  }
+
+  
+}
