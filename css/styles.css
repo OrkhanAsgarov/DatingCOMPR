@@ -26,6 +26,34 @@ a {
   color: #fff;
 }
 
+.blueMode{
+  background-color: #cadef7;
+  color: #204165;
+}
+
+.blueMode a, .blueMode button {
+  color: #204165;
+}
+
+.pinkMode{
+  background-color: #FEDDDE;
+  color: #CA6D70;
+}
+
+.pinkMode a, .pinkMode button {
+  color: #CA6D70;
+}
+
+.burgundyMode{
+  background-color: #B34A4D;
+  color: #FEDDDE;
+}
+
+.burgundyMode a {
+  color: #FEDDDE;
+} 
+
+
 .container {
   display: flex;
   flex-direction: column;
