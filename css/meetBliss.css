@@ -1,0 +1,541 @@
+body,
+html {
+  height: max-content;
+}
+
+.blueMode {
+  background: url("/images/meetBliss/bgMeetBlissOr.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.mobilMenuContainer {
+  position: relative;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobilMenuContainer .closeMenu {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  /* width: 32px;
+    height: 22px; */
+}
+
+.mobilMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 286px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobilItem {
+  font-size: 36px;
+  font-family: Gaegu;
+  font-weight: 700;
+  line-height: 39.6px;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.mainHeader {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburgerMenu {
+  display: none;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+}
+
+.leftMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 156px;
+  height: 252px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  left: 32px;
+  bottom: 60px;
+}
+
+.menuItem {
+  width: 160px;
+  height: 42px;
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  line-height: 22.4px;
+  letter-spacing: 1.44px;
+  word-wrap: break-word;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 31px;
+}
+
+.videoContainer .videoTitle {
+  font-size: 58px;
+  font-family: "Gaegu";
+  font-weight: 700;
+  line-height: 63.8px;
+  word-wrap: break-word;
+}
+
+.videoContainer .videoText {
+  font-size: 23px;
+  font-family: "Gaegu";
+  font-weight: 400;
+  line-height: 33.35px;
+  word-wrap: break-word;
+  margin-bottom: 16px;
+}
+
+/* .videoContainer .video {
+  width: 835px;
+  height: 470px;
+} */
+.commentContainer {
+  display: flex;
+  width: 837px;
+  height: 313px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.recentContainer,
+.leaveContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.noteAreaTitle {
+  display: block;
+  font-size: 23px;
+  font-family: "Gaegu";
+  font-weight: 400;
+  line-height: 33.35px;
+  word-wrap: break-word;
+  margin-bottom: 8px;
+}
+
+.recentNotes {
+  width: 346px;
+  height: 272px;
+  padding: 32px;
+  padding-left: 24px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: 1px rgba(31.82, 64.8, 100.78, 0.8) solid;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.recentNotes span {
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.leaveContainer .name {
+  width: 467px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  border: 1px rgba(31.82, 64.8, 100.78, 0.8) solid;
+  padding: 0 12px;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  color: #204165;
+}
+
+.leaveContainer .noteText {
+  width: 467px;
+  height: 148px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  border: 1px rgba(31.82, 64.8, 100.78, 0.8) solid;
+  padding: 12px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  color: #204165;
+  resize: none;
+  overflow: auto; /* Allows overflow content to be scrollable */
+}
+
+
+
+.noteText::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar in WebKit browsers */
+}
+
+.noteText {
+  scrollbar-width: none; /* Hides the scrollbar in Firefox */
+}
+
+.leaveContainer .noteBtnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 0 7px;
+}
+
+.leaveContainer .noteBtnContainer button {
+  width: 99px;
+  height: 42px;
+  text-align: center;
+  color: #204165;
+  font-size: 12px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 16.8px;
+  letter-spacing: 1.44px;
+  word-wrap: break-word;
+  background: rgba(201.76, 221.57, 247.04, 0.5);
+  border-radius: 8px;
+  border: 1px rgba(31.82, 64.8, 100.78, 0.8) solid;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footerLeft,
+.footerRight {
+  width: 277px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+
+.footerLeft {
+  padding-left: 32px;
+}
+
+.footerRight {
+  justify-content: end;
+  gap: 10px;
+  padding-right: 16px;
+}
+
+.footerCenter {
+  width: 100%;
+  height: 42px;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 22.4px;
+  letter-spacing: 1.44px;
+  word-wrap: break-word;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.footerButtonMobile {
+  display: none;
+}
+
+.footerButton {
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 22.4px;
+  letter-spacing: 1.44px;
+  word-wrap: break-word;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.doubleArrow {
+  width: 10px;
+  height: 16px;
+}
+
+.leftArrow {
+  background: url("/icons/doubleLeftArrow.svg") no-repeat center center;
+}
+
+.rightArrow {
+  background: url("/icons/doubleRightArrow.svg") no-repeat center center;
+}
+
+@media screen and (max-width: 750px) {
+  .mainHeader {
+    margin-bottom: 32px;
+  }
+
+  .mainHeader h1 {
+    margin-top: 23px;
+    margin-left: 16px;
+    font-size: 16px;
+    font-family: Zilla Slab;
+    font-weight: 700;
+    line-height: 20.8px;
+    letter-spacing: 0.96px;
+    word-wrap: break-word;
+  }
+
+  .hamburgerMenu {
+    display: block;
+    width: 32px;
+    height: 22px;
+    margin-right: 16px;
+  }
+
+  .leftMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: #cadef7;
+    z-index: 1000;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .menuItem {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .sectionContainer {
+    margin-bottom: 90px;
+  }
+
+  .videoContainer {
+    margin-bottom: 9.1px;
+}
+
+  .videoContainer .videoTitle {
+    font-size: 36px;
+    line-height: 39.6px;
+    margin-bottom: 8px;
+  }
+
+  .videoContainer .videoText {
+    font-size: 19px;
+    line-height: 23.18px;
+    letter-spacing: 0.19px;
+    margin-bottom: 6px;
+  }
+
+  .videoContainer .video video {
+    width: 343px;
+    aspect-ratio: auto 343 / 188.9;
+    height: 188.9px;
+  }
+
+  .commentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.recentContainer {
+  margin-bottom: 8px;
+}
+
+.noteAreaTitle {
+  font-size: 20px;
+  line-height: 31px;
+  margin-bottom: 0;
+}
+
+.recentNotes {
+  width: 343px;
+  height: 194px;
+  padding: 16px 16px 14px 16px;
+ box-shadow: none;
+}
+
+.leaveContainer {
+  justify-content: center;
+}
+
+.leaveContainer .name {
+  width: 343px;
+  height: 48px;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+}
+
+.leaveContainer .noteText {
+  width: 343px;
+  height: 48px;
+  padding: 12px 15.4px;
+  margin-bottom: 8px;
+}
+
+.leaveContainer .noteBtnContainer {
+  justify-content: center;
+  padding: 0;
+}
+
+.leaveContainer .noteBtnContainer button {
+  width: 343px;
+  height: 48px;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 19.6px;
+  letter-spacing: 0.98px;
+  background: #D8E2EFCC;
+  border: 1px #585858 solid;
+}
+
+  .footerContainer {
+    padding-top: 0;
+    height: 73px;
+    margin-bottom: 0;
+    border: none;
+    border-top: 2px solid;
+  }
+
+  /* .footerContainer {
+    position: fixed;
+    bottom: 24px;
+    left: 0;
+    width: 100%;
+  } */
+
+  .footerLeft,
+  .footerRight {
+    width: 55px;
+    height: auto;
+  }
+
+  .footerLeft {
+    padding-left: 23px;
+  }
+
+  .footerRight {
+    padding-right: 29px;
+  }
+
+  .footerCenter {
+    border: none;
+    height: auto;
+    padding-left: 35px;
+  }
+
+  .footerButtonMobile {
+    display: none;
+  }
+
+  .footerButton {
+    display: none;
+  }
+
+  .footerButtonMobile {
+    display: block;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 600;
+    line-height: 22.4px;
+    letter-spacing: 1.44px;
+    word-wrap: break-word;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .mobilicon {
+    width: 28px;
+    height: 24px;
+  }
+
+  .closeButton {
+    background: url("/icons/Exit.svg") no-repeat center center;
+  }
+
+  .arrowBack {
+    background: url("/icons/ArrowBack.svg") no-repeat center center;
+  }
+
+  .arrowForwards {
+    background: url("/icons/ArrowForwards.svg") no-repeat center center;
+  }
+}
