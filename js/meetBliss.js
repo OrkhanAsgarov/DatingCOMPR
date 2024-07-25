@@ -40,7 +40,8 @@ submitButton.addEventListener("click", function () {
   if(nameInput.value.length > 0 && noteText.value.length > 0){
     leaveContainer.style.display = 'none';
     succesContainer.style.display = 'flex';
-    recentNotes.innerHTML += nameInput.value + ": " + noteText.value;
+    // recentNotes.innerHTML += nameInput.value + ": " + noteText.value;
+    recentNotes.innerHTML += `<span>${nameInput.value}: ${noteText.value}</span>`;
   } 
   
 })
