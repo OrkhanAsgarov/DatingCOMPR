@@ -44,7 +44,7 @@ html {
 }
 
 .mainHeader {
-  margin-bottom: 22px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -95,6 +95,74 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: start;
+}
+
+.sectionContainer .sectionRow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 958px;
+  margin-bottom: 158px;
+}
+
+
+.sectionContainer .sectionTitle {
+  color: #36404B;
+text-align: center;
+
+/* Zilla Header 1 */
+font-family: "Zilla Slab";
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; /* 61.6px */
+letter-spacing: 1.68px;
+}
+
+.sectionContainer .sectionText {
+  color: #3C4754;
+
+/* Zilla Body Large */
+font-family: "Zilla Slab";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 36px */
+margin-bottom: 20px;
+}
+
+.sectionContainer .yearbookContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
+  gap:10px;
+}
+
+.sectionContainer .yearbookContainer .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.yearbookContainer .content img{
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.yearbookContainer .content img:hover{
+  filter: grayscale(0%);
+}
+
+.yearbookContainer .content .noPicture {
+  width: 222px;
+height: 293px;
+flex-shrink: 0;
+border: 8px solid #FFF;
+background: #D9D9D9;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -186,7 +254,7 @@ main {
   
 
   .mainHeader {
-    margin-bottom: 32px;
+    margin-bottom: 41px;
   }
 
   .mainHeader h1 {
@@ -229,8 +297,46 @@ main {
   }
 
   .sectionContainer {
-    margin-bottom: 90px;
+    margin-bottom: 129px;
   }
+
+  
+  .sectionContainer .sectionRow {
+    width: 348px;
+    margin-bottom: 0;
+  }
+
+  .sectionContainer .sectionTitle {
+    text-wrap: wrap;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 8px;
+  }
+
+  .sectionContainer .sectionText {
+    width: 330px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.18px;
+    margin-bottom: 15px;
+  }
+
+  .yearbookContainer{
+    gap: 7px;
+  }
+
+  .yearbookContainer .content img {
+    width: 169px;
+    height: 226px;
+  }
+
+  .yearbookContainer .content .noPicture {
+    width: 169px;
+    height: 222px;
+  }
+
 
 
 
