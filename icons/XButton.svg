@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="X Button">
+<g id="Ellipse 150">
+<circle cx="24" cy="24" r="24" fill="#FFF6C9" fill-opacity="0.9"/>
+<circle cx="24" cy="24" r="24" stroke="#204165"/>
+</g>
+<path id="Line 4" d="M14 14L33.8464 33.8124" stroke="#204165" stroke-width="3" stroke-linecap="round"/>
+<path id="Line 5" d="M34 14L14.0001 33.6625" stroke="#204165" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg>

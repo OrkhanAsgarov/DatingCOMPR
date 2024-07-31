@@ -97,7 +97,7 @@ main {
   justify-content: start;
 }
 
-.sectionContainer .sectionRow{
+.sectionContainer .sectionRow {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,27 +109,29 @@ main {
 
 .sectionContainer .sectionTitle {
   color: #36404B;
-text-align: center;
+  text-align: center;
 
-/* Zilla Header 1 */
-font-family: "Zilla Slab";
-font-size: 56px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%; /* 61.6px */
-letter-spacing: 1.68px;
+  /* Zilla Header 1 */
+  font-family: "Zilla Slab";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  /* 61.6px */
+  letter-spacing: 1.68px;
 }
 
 .sectionContainer .sectionText {
   color: #3C4754;
 
-/* Zilla Body Large */
-font-family: "Zilla Slab";
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 36px */
-margin-bottom: 20px;
+  /* Zilla Body Large */
+  font-family: "Zilla Slab";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 36px */
+  margin-bottom: 20px;
 }
 
 .sectionContainer .yearbookContainer {
@@ -137,7 +139,7 @@ margin-bottom: 20px;
   flex-wrap: wrap;
   align-items: start;
   justify-content: center;
-  gap:10px;
+  gap: 10px;
 }
 
 .sectionContainer .yearbookContainer .content {
@@ -146,23 +148,272 @@ margin-bottom: 20px;
   align-items: center;
 }
 
-.yearbookContainer .content img{
+.yearbookContainer .content img {
   cursor: pointer;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
 }
 
-.yearbookContainer .content img:hover{
+.yearbookContainer .content img:hover {
   filter: grayscale(0%);
 }
 
 .yearbookContainer .content .noPicture {
   width: 222px;
-height: 293px;
-flex-shrink: 0;
-border: 8px solid #FFF;
-background: #D9D9D9;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 293px;
+  flex-shrink: 0;
+  border: 8px solid #FFF;
+  background: #D9D9D9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.sectionContainer .selectedRow {
+  display: none;
+  position: relative;
+  width: 958px;
+  border-radius: 8px;
+  border: 0px solid #000;
+  background: #FFC433;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.selectedRow .xButton {
+  display: inline-block;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: url("../icons/XButton.svg") no-repeat center center;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.selectedRow .xButton.mobileView{
+  background: url("../icons/xbuttonWithoutBg.svg") no-repeat center center;
+}
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-top: 56PX;
+  margin-bottom: 37px;
+}
+
+.videoContainer .videoTitle {
+  color: #204165;
+  text-align: center;
+
+  /* Zilla Header 1 */
+  font-family: "Zilla Slab";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  /* 61.6px */
+  letter-spacing: 1.68px;
+  margin-bottom: 4px;
+}
+
+.videoContainer .videoText {
+  color: #204165;
+  text-align: center;
+
+  /* Zilla Body Large */
+  font-family: "Zilla Slab";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 36px */
+  margin-bottom: 25px;
+}
+
+/* .videoContainer .video {
+  width: 835px;
+  height: 470px;
+} */
+.commentContainer {
+  display: flex;
+  width: 837px;
+  height: 313px;
+  justify-content: space-between;
+  margin-bottom: 168px;
+}
+
+.recentContainer,
+.leaveContainer,
+.succesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.noteAreaTitle {
+  color: #204165;
+
+  /* Zilla Body Large */
+  font-family: "Zilla Slab";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 36px */
+  margin-bottom: 5px;
+}
+
+.recentNotes {
+  width: 346px;
+  height: 272px;
+  padding: 32px;
+  padding-left: 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(32, 65, 101, 0.80);
+  background: rgba(255, 255, 255, 0.70);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  position: relative;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.recentNotes span {
+  color: #3C4754;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.recentNotes .vektor2 {
+  display: inline-block;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  background: url("/icons/Vector2Yellow.svg") no-repeat center center;
+  width: 20px;
+  height: 10px;
+  stroke-width: 3px;
+  display: none;
+}
+
+.leaveContainer .name::placeholder{
+  color: #204165CC;
+}
+
+.leaveContainer .name {
+  width: 467px;
+  height: 42px;
+  border-radius: 8px;
+border: 1px solid rgba(32, 65, 101, 0.80);
+background: rgba(255, 255, 255, 0.70);
+  padding: 0 12px;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  color: #204165;
+}
+
+.leaveContainer .name::placeholder, .leaveContainer .noteText::placeholder{color: #BAC2C4;}
+.leaveContainer .name:focus, .leaveContainer .noteText:focus{outline: none;}
+.leaveContainer .noteText {
+  width: 467px;
+  height: 148px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  border: 1px rgba(31.82, 64.8, 100.78, 0.8) solid;
+  padding: 12px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  color: #204165;
+  resize: none;
+  overflow: auto;
+  /* Allows overflow content to be scrollable */
+}
+
+
+
+.noteText::-webkit-scrollbar {
+  display: none;
+  /* Hides the scrollbar in WebKit browsers */
+}
+
+.noteText {
+  scrollbar-width: none;
+  /* Hides the scrollbar in Firefox */
+}
+
+.leaveContainer .noteBtnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 0 7px;
+}
+
+.leaveContainer .noteBtnContainer button {
+  width: 99px;
+  height: 42px;
+  text-align: center;
+  color: #204165;
+  font-size: 12px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 16.8px;
+  letter-spacing: 1.44px;
+  word-wrap: break-word;
+  background: rgba(254, 239, 196, 0.8);
+  border-radius: 8px;
+  border: 1px rgba(31.82, 64.8, 100.78, 0.8) solid;
+}
+
+
+
+.leaveContainer .noteBtnContainer button:hover {
+  background: rgba(2, 157, 126, 0.80);
+  color: #E3FCF8;
+}
+
+.succesContainer {
+  display: none;
+}
+
+.succesNotes {
+  width: 467px;
+  height: 97px;
+  padding: 15px;
+  background: rgba(2, 157, 126, 0.70);
+  border-radius: 8px;
+  border: 1px rgba(31.82, 64.8, 100.78, 0.8) solid;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.succesNotes span {
+  color: #fff;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  text-align: left;
 }
 
 
@@ -251,7 +502,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (max-width: 750px) {
-  
+
 
   .mainHeader {
     margin-bottom: 41px;
@@ -295,15 +546,16 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     width: 100%;
     text-align: left;
   }
-
+/* 
   .sectionContainer {
     margin-bottom: 129px;
-  }
+  } */
 
-  
+
   .sectionContainer .sectionRow {
     width: 348px;
     margin-bottom: 0;
+    margin-bottom: 129px;
   }
 
   .sectionContainer .sectionTitle {
@@ -323,7 +575,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 15px;
   }
 
-  .yearbookContainer{
+  .yearbookContainer {
     gap: 7px;
   }
 
@@ -337,6 +589,121 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     height: 222px;
   }
 
+  .sectionContainer .selectedRow {
+    width: 100%;
+    padding: 80px 26px 35px;
+    border-radius: 0;
+  }
+
+  .videoContainer {
+    margin-bottom: 16.25px;
+    margin-top: 0 ;
+  }
+
+  .videoContainer .videoTitle {
+    font-size: 30px;
+    margin-bottom: 2px;
+    font-weight: 600;
+    line-height: 32.4px;
+  }
+
+  .videoContainer .videoText {
+    font-size: 18px;
+    line-height: 23.4px;
+    letter-spacing: 0.18px;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .videoContainer .video {
+    width: 343px;
+    height: 214px;
+  }
+
+  .videoContainer .video video {
+    width: 343px;
+    aspect-ratio: auto 343 / 214;
+    height: 214px;
+  }
+
+  .commentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.recentContainer {
+  margin-bottom: 16px;
+}
+
+.noteAreaTitle {
+  font-size: 18px;
+  line-height: 23.4px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.recentNotes {
+  width: 343px;
+  height: 194px;
+  padding: 16px 16px 14px 16px;
+ box-shadow: none;
+}
+
+.recentNotes .vektor2 {
+  display: none;
+}
+
+.leaveContainer {
+  justify-content: center;
+}
+
+.leaveContainer .name {
+  width: 343px;
+  height: 48px;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+}
+
+.leaveContainer .noteText {
+  width: 343px;
+  height: 48px;
+  padding: 12px 15.4px;
+  margin-bottom: 8px;
+}
+
+.leaveContainer .noteBtnContainer {
+  justify-content: center;
+  padding: 0;
+}
+
+.leaveContainer .noteBtnContainer button {
+  width: 343px;
+  height: 48px;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 19.6px;
+  letter-spacing: 0.98px;
+  background: rgba(252, 240, 206, 0.29);
+  border: 1px #585858 solid;
+  box-shadow: 0 2px 5px grey;
+}
+
+.leaveContainer .noteBtnContainer.active button {
+  background: #029D7E;
+}
+
+.succesNotes {
+  width: 343px;
+  height: 96px;
+  padding: 12px;
+}
+  
+
 
 
 
@@ -348,7 +715,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-top: 2px solid;
   }
 
-  
+
   .footerLeft,
   .footerRight {
     width: 55px;
