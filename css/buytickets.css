@@ -45,6 +45,103 @@ html {
   cursor: pointer;
 }
 
+ .mobileDateTime{
+  width: 224px;
+height: 264px;
+border-radius: 8px;
+border: 1px solid #CA6D70;
+background: rgba(228, 78, 82, 0.95);
+position: fixed;
+left: 50%;
+top: 255px;
+transform: translateX(-50%);
+z-index: 5;
+display: none;
+flex-direction: column;
+align-items: center;
+}
+
+
+ .mobileDateTime .closeMobilDateTime {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  padding-top: 16px;
+  padding-right: 16px;
+  margin-bottom: 23px;
+}
+
+ .mobileDateTime .closeMobilDateTime i{
+  width: 17px;
+  height: 17px;
+  background: url("/icons/buytickets/closeDateRedMobile.svg") no-repeat center center;
+}
+
+ .mobileDateTime .selectedMobileDate {
+  width: 100%;
+  color: #FCBBBD;
+
+text-align: center;
+/* Mobile Gaegu Header 2 */
+font-family: Gaegu;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 26.4px */
+margin-bottom: 23px;
+}
+
+ .mobileDateTime .hourContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 4px;
+  padding: 0 9px;
+  margin-bottom: 39px;
+}
+
+ .mobileDateTime .hourContainer .hour {
+  width: 100%;
+
+  color: #FCBBBD;
+
+text-align: center;
+/* Mobile Gaegu header 1 */
+font-family: Gaegu;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; /* 39.6px */
+}
+
+ .mobileDateTime .hourContainer .hour.selected {
+  border-radius: 2px;
+border: 1px solid #FFF;
+color: #FFF;
+text-align: center;
+font-family: Gaegu;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; /* 39.6px */
+}
+
+ .mobileDateTime .selectFooter{
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FCBBBD;
+text-align: center;
+font-family: Gaegu;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 145%; /* 20.3px */
+}
+
 .mainHeader {
   margin-bottom: 50px;
   display: flex;
@@ -177,7 +274,10 @@ text-transform: lowercase;
   justify-content: center;
   gap: 9px;
   flex-wrap: wrap;
+  position: relative;
 }
+
+
 
 .calendarContainer .dateContainer .dateItem {
   width: 129px;
@@ -236,38 +336,19 @@ text-transform: lowercase;
   display: flex;
   align-items: start;
   justify-content: center;
-  gap: 11px;
   margin-bottom: 56px;
 }
 
-
-.buyButtonContainer .buyBtn {
-  width: 222px;
-  height: 48px;
-  display: block;
-  border-radius: 8px;
-  border: 1px solid #CA6D70;
-  background: rgba(228, 78, 82, 0.20);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: #CA6D70;
-  text-align: center;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%; /* 19.6px */
-  letter-spacing: 0.98px;
-  text-transform: uppercase;
-  cursor: pointer;
+.sectionContainer .buyButtonContainer .buyButtonRow {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 11px;
 }
 
-.buyButtonContainer .buyBtn.active {
-  border: 1px rgba(254, 221, 222, 0.00);
-  color: #FEDDDE;
-background: #E44E52;
-}
 
 .buyButtonContainer .dropdownBtn {
+  width: 222px;
   background: rgba(241, 243, 243, 0.90);
   position: relative;
   display: flex;
@@ -290,12 +371,10 @@ background: #E44E52;
   cursor: pointer;
 }
 
-
-
-.buyButtonContainer .dropdownBtn span{
+.buyButtonContainer .dropdownBtn > span{
   display: block;
   width: 222px;
-  height: 48px;
+  height: 46px;
   position: relative;
   display: flex;
   align-items: center;
@@ -332,6 +411,36 @@ height: 13px;
   border-radius: 0 0 8px 8px;
 }
 
+.buyButtonContainer .buyBtn {
+  width: 222px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #CA6D70;
+  background: rgba(228, 78, 82, 0.20);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #CA6D70;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 0.98px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.buyButtonContainer .buyBtn.active {
+  border: 1px rgba(254, 221, 222, 0.00);
+  color: #FEDDDE;
+background: #E44E52;
+}
+
+
+
 .sectionContainer .instructionsController {
   width: 691px;
   display: flex;
@@ -366,7 +475,7 @@ margin-bottom: 10px;
   padding-left: 16px;
 }
 
-.instructionsRow  ol.instructionsList {
+.instructionsRow  ul.instructionsList {
   list-style-type: decimal; /* Numaralı liste için */
   overflow-wrap: break-word; /* Taşarsa alt satıra geçmesini sağlar */
   padding-left: 28px;
@@ -402,6 +511,11 @@ font-weight: 700;
 line-height: 110%; /* 79.2px */
 }
 
+.checkoutContainer .checkoutTextMobile,
+.checkoutContainer .quizLinkMobile{
+  display: none;
+}
+
 .footerContainer {
   width: 100%;
   height: 42px;
@@ -415,6 +529,7 @@ line-height: 110%; /* 79.2px */
   position: fixed;
   bottom: 14px;
   left: 0;
+  z-index: 2;
 }
 
 .footerLeft,
@@ -531,11 +646,187 @@ line-height: 110%; /* 79.2px */
     width: 100%;
     text-align: left;
   }
+
+  /* .mobileDateTime{
+    width: 224px;
+  height: 264px;
+  border-radius: 8px;
+  border: 1px solid #CA6D70;
+  background: rgba(228, 78, 82, 0.95);
+  position: fixed;
+  left: 50%;
+  top: 255px;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  } */
+  .sectionContainer .titlePage {
+    margin-bottom: 13px;
+  }
+  .sectionContainer .titlePage h2 {
+    font-size: 36px;
+  }
+
+  .sectionContainer .calendarContainer{
+    width: 100%;
+    padding: 0 17px;
+    margin-bottom: 25px;
+  }
+
+  .calendarContainer .monthContainer{
+    gap: 15px;
+    margin-bottom: 8px;
+  }
+  
+  .calendarContainer .monthContainer .monthArrow{
+    width: 10px;
+  height: 12px;
+  }
+  
+  .calendarContainer .monthContainer .leftArrowMonth{
+    background: url("/icons/buytickets/ArrowsLeftRedMobile.svg") no-repeat center center;
+  }
+  
+  .calendarContainer .monthContainer .rightArrowMonth{
+    background: url("/icons/buytickets/ArrowsRightRedMobile.svg") no-repeat center center;
+  }
+
+  .calendarContainer .monthContainer span{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 110%;
+  }
+
+  .calendarContainer .dayContainer{
+    gap: 3px;
+  }
+
+  .calendarContainer .dayContainer .dayItem {
+    text-transform: capitalize;
+  }
+
+  .calendarContainer .dateContainer{
+    gap: 3px;
+  }
+
+  .calendarContainer .dateContainer .dateItem{
+    width: 46px;
+    height: 62.50px;
+  }
+  
+  .dateContainer .dateItem .dateOfMonth{
+    position: unset;
+    color: #E44E52;
+    font-size: 24px;
+    line-height: 110%;
+  }
+
+  .dateContainer .dateItem.selected .dateOfMonth{
+    color: #FEDDDE;
+  }
+
+  .dateContainer .dateItem .dateTime{
+    display: none;
+  }
+
+  .sectionContainer .buyButtonContainer{
+    padding: 0 17px;
+    height: 104px;
+    margin-bottom: 79px;
+  }
+
+  .sectionContainer .buyButtonContainer .buyButtonRow {
+    flex-direction: column;
+    width: 100%;
+    height: 104px;
+    position: relative;
+    gap: 8px;
+  }
+  .buyButtonContainer .dropdownBtn{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .buyButtonContainer .dropdownBtn .dropdownVector {
+    background: url("/icons/buytickets/VectorDownRedMobile.svg") no-repeat center center;
+  }
+
+  .buyButtonContainer .dropdownBtn span{
+    width: 100%;
+  }
+
+  .buyButtonContainer .buyBtn{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .sectionContainer .instructionsController{
+    padding: 0 15px;
+    width: 100%;
+    gap: 56px;
+  }
+
+  .instructionsRow .instructionsTitle {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 110%; /* 39.6px */
+    margin-bottom: 19px;
+  }
+
+  .instructionsRow .instructionsText, 
+  .instructionsRow .instructionsItem {
+    font-size: 19px;
+    line-height: 122%; /* 23.18px */
+    letter-spacing: 0.19px;
+    margin-bottom: 10px;
+  }
 /* 
   .sectionContainer {
     margin-bottom: 129px;
   } */
+  .checkoutContainer {
+    padding-top: 0;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: start;
+    padding-top: 120px;
+  }
+  
+  .checkoutContainer .checkoutText {
+    display: none;
+  }
+  
+  .checkoutContainer .checkoutTextMobile{
+    display: block;
+    color: #E44E52;
+text-align: center;
 
+/* Mobile Gaegu header 1 */
+font-family: Gaegu;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; /* 39.6px */
+  }
+  .checkoutContainer .quizLinkMobile{
+    display: block;
+    color: #E44E52;
+text-align: center;
+font-family: Gaegu;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; /* 39.6px */
+text-decoration-line: underline;
+  }
 
   .footerContainer {
     padding-top: 0;
@@ -543,6 +834,7 @@ line-height: 110%; /* 79.2px */
     margin-bottom: 0;
     border: none;
     border-top: 2px solid;
+    bottom: 0;
   }
 
 

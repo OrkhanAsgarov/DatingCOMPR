@@ -24,7 +24,28 @@ const months = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
+
+const dayContainer = document.querySelector('.dayContainer');
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const mobileDays = ["Su", "M", "Tu", "W", "Th", "Fr", "Sa"];
+
+function updateDayItems() {
+  dayContainer.innerHTML = ''; // Mevcut günleri temizle
+
+  const dayItems = window.innerWidth < 750 ? mobileDays : days;
+  dayItems.forEach(day => {
+    const dayItem = document.createElement('div');
+    dayItem.className = 'dayItem';
+    dayItem.textContent = day;
+    dayContainer.appendChild(dayItem);
+  });
+}
+
+// Pencere yeniden boyutlandırıldığında güncellemeyi tetikler
+window.addEventListener('resize', updateDayItems);
+
+// Sayfa yüklendiğinde güncellemeyi tetikler
+document.addEventListener('DOMContentLoaded', updateDayItems);
 
 // Tarihleri tutacak bir değişken
 let currentMonth = new Date().getMonth();
@@ -36,7 +57,7 @@ function updateCalendar() {
   monthName.textContent = months[currentMonth];
 
   // Takvim günlerini güncelle
-  dateContainer.innerHTML = ''; // Mevcut tarihleri temizle
+  dateContainer.innerHTML = '';
   const firstDay = new Date(currentYear, currentMonth, 1).getDay(); // İlk günün haftanın hangi gününe denk geldiğini bul
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate(); // Ayın kaç gün olduğunu bul
 
@@ -125,6 +146,47 @@ rightArrowMonth.addEventListener("click", function () {
 // Sayfa yüklendiğinde mevcut ayı göster
 updateCalendar();
 
+// Ekran boyutu 750px'den küçük olduğunda tarih itemına tıklama
+document.querySelectorAll('.dateItem').forEach(item => {
+  item.addEventListener('click', function() {
+    if (window.innerWidth < 750) {
+      document.querySelector('.mobileDateTime').style.display = 'flex';
+    }
+  });
+});
+
+// mobileDateTime divini kapatma
+document.querySelector('.closeMobilDateTime').addEventListener('click', function() {
+  document.querySelector('.mobileDateTime').style.display = 'none';
+});
+
+// Seçilen tarihi dinamik olarak alma
+document.querySelectorAll('.dateItem').forEach(item => {
+  item.addEventListener('click', function() {
+    const selectedDate = this.querySelector('.dateOfMonth').textContent;
+    const selectedDay = this.querySelector('.dateTime').textContent;
+
+    const currentDate = new Date();
+    currentDate.setDate(selectedDate);
+
+    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    const formattedDate = `${dayNames[currentDate.getDay()]}, ${monthNames[currentDate.getMonth()]} ${currentDate.getDate()}th`;
+
+    document.querySelector('.selectedMobileDate').textContent = formattedDate;
+  });
+});
+
+// Saat dilimi seçildiğinde selected classını ekleme
+document.querySelectorAll('.hour').forEach(hour => {
+  hour.addEventListener('click', function() {
+    document.querySelectorAll('.hour.selected').forEach(selected => {
+      selected.classList.remove('selected');
+    });
+    this.classList.add('selected');
+  });
+});
 
 document.addEventListener('DOMContentLoaded', function() {
   const dateItems = document.querySelectorAll('.dateItem');
@@ -139,10 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
           this.classList.add('selected');
       });
   });
-
-
 });
-
 
 // Seçim butonlarına tıklama işlevi ekleme
 const choosen = document.querySelector('.choosen');
@@ -155,7 +214,6 @@ const sectionContainer = document.querySelector(".sectionContainer");
 const checkoutContainer = document.querySelector(".checkoutContainer");
 
 choosen.addEventListener('click', function() {
-
   // Seçim metnini kontrol et ve görünürlüklerini ayarla
   if (onlineOption.style.display === 'flex' || inpersonOption.style.display === 'flex') {
     onlineOption.style.display = 'none';
@@ -163,15 +221,12 @@ choosen.addEventListener('click', function() {
     dropdownVector.classList.remove("rotated");
   } else {
     dropdownVector.classList.add("rotated");
-
     if (chooseText.textContent.includes('IN PERSON')) {
       onlineOption.style.display = 'flex';
       inpersonOption.style.display = 'none';
-
     } else {
       onlineOption.style.display = 'none';
       inpersonOption.style.display = 'flex';
-
     }
   }
 });
@@ -188,16 +243,9 @@ inpersonOption.addEventListener('click', function() {
   inpersonOption.style.display = 'none';
   dropdownVector.classList.remove("rotated");
   buyButton.classList.add("active");
-
 });
 
-
-buyButton.addEventListener("click", function(){
+buyButton.addEventListener("click", function() {
   sectionContainer.style.display = "none";
   checkoutContainer.style.display = "flex";
 });
-
-
-
-
-
