@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dating Comprehension</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gaegu&family=Inter:wght@400;600&family=Zilla+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/quiz.css" />
+  </head>
+  <body>
+    <div class="mobilMenuContainer burgundyMode">
+      <img src="/icons/closeBurgundyMode.svg" class="closeMenu" />
+      <ul class="mobilMenu">
+        <li class="mobilItem"><a href="./showHome.html">HOME</a></li>
+        <li class="mobilItem"><a href="./meetBliss.html">MEET BLISS</a></li>
+        <li class="mobilItem">
+          <a href="./meetTheDates.html">MEET THE DATES</a>
+        </li>
+        <li class="mobilItem"><a href="./buytickets.html">BUY TICKETS</a></li>
+        <li class="mobilItem"><a>TAKE THE QUIZ</a></li>
+        <li class="mobilItem"><a>CONTACT US</a></li>
+      </ul>
+    </div>
+
+    <div class="container greenMode">
+      <header class="mainHeader">
+        <h1>
+          <a href="home.html" class="primaryColor"
+            >Dating <br />
+            Comprehension</a
+          >
+        </h1>
+        <img
+          src="/icons/quiz/btnHamburgerGreen.svg"
+          class="hamburgerMenu"
+        />
+      </header>
+
+      <main>
+        <ul class="leftMenu">
+          <li class="menuItem"><a href="./showHome.html">HOME</a></li>
+          <li class="menuItem"><a href="./meetBliss.html">MEET BLISS</a></li>
+          <li class="menuItem">
+            <a href="./meetTheDates.html">MEET THE DATES</a>
+          </li>
+          <li class="menuItem"><a href="./buytickets.html">BUY TICKETS</a></li>
+          <li class="menuItem"><a>TAKE THE QUIZ</a></li>
+          <li class="menuItem"><a>CONTACT US</a></li>
+        </ul>
+
+        <div class="sectionContainer">
+          <div class="compatibilityContainer">
+            <div class="compatibilityHeader">SUBJECTIVE SCORE  INTREPID FOLKS ONLY</div>
+
+            <div class="compatibilityRow active">
+              <h3 class="compatibilityTitle">THE <br> COMPATIBILITY QUIZ </h3>
+              <div class="compatibilityText">
+                <span class="bold">Instructions:</span>
+                <span class="margin">Enter for a chance to be live-matched after the show.</span>
+                <span class="bold">How to Enter:</span>
+                <span class="list">1. Buy a ticket.</span>
+                <span class="list secretLink">2. <span> Click on the link in your email.</span></span>
+                <span class="list lastList">3. Answer 10 questions.</span>
+
+                <div class="btnRow">
+                  <a class="buyTicketButton">BUY TICKETS</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="formRow">
+              <h3 class="compatibilityTitle">THE <br> COMPATIBILITY QUIZ </h3>
+              <p class="formTitle">Take this quiz for a chance to be live matched after the show!</p>
+              <form class="formContent">
+                <div class="form-item">
+                  <label>Name: </label>
+                  <input type="text" placeholder="Your name"/>
+                </div>
+                <div class="form-item">
+                  <label>Age: </label>
+                  <input type="text" placeholder="Age"/>
+                </div>
+                <div class="form-item">
+                  <label>Location: </label>
+                  <input type="text" placeholder="City, State?"/>
+                </div>
+                <div class="form-item">
+                  <label>Gender: </label>
+                  <div class="custom-select-content gender" style="z-index: 1;">
+
+                    <div class="custom-select singleselect">
+                      <span class="selectPlaceholder single">Choose a gender</span>
+                      <i class="downArrow"></i>
+
+                    </div>
+
+                    <div class="selectUl singleselect-list">
+                      <i class="upArrow singleUp"></i>
+
+                      <div class="select-list">
+                        <span class="list-item">Famale</span>
+                      </div>
+                      <div class="select-list border-list">
+                        <span class="list-item">Male</span>
+                      </div>
+                      <div class="select-list">
+                        <span class="list-item">Non-Binary</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  
+                </div>
+                <div class="form-item mobile-margin">
+                  <label>Seeking: </label>
+                  <div class="custom-select-content">
+                    <div class="custom-select multiselect">
+                      <span class="selectPlaceholder multi">Select all that apply</span>
+                      <i class="downArrow"></i>
+                    </div>
+                    <div class="selectUl multiselect-list">
+                      <i class="upArrow multiUp"></i>
+
+                      <div class="select-list">
+                        <span class="checkbox">
+                          <img src="/icons/quiz/pencilscribble1.png" alt="">
+                        </span>
+                        <span class="list-item">Famale</span>
+                      </div>
+                      <div class="select-list border-list">
+                        <span class="checkbox"><img src="/icons/quiz/pencilscribble2.png" alt=""></span>
+                        <span class="list-item">Male</span>
+                      </div>
+                      <div class="select-list">
+                        <span class="checkbox"><img src="/icons/quiz/pencilscribble3.png" alt=""></span><span class="list-item">Non-Binary</span>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="form-item button-content">
+                  
+                  <button class="btnBegin">BEGIN</button>
+                 
+                </div>
+              </form>
+            </div>
+
+            <div class="questions-container">
+              <div class="question-row">
+                <form class="questionForm">
+                
+                  <p class="questionNumberContent"> Question <span class="question-number">1</span> of <span class="question-total">10</span>: </p>
+                  
+                  <div class="question-content active">
+                    <p class="question-text">What kind of activity are you most likely to engage in on a weekend?</p>
+                    <ul class="answer-list">
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          A
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">Reading a book, watching a movie, or binging Netflix</span>
+                      </li>
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          B
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">Heading out to a play, concert or museum</span>
+                      </li>
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          C
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">Hiking, biking, or generally being outdoors.</span>
+                      </li>
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          D
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">Meet me at the club</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="question-content" >
+                    <p class="question-text">What kind of food are you most into?</p>
+                    <ul class="answer-list">
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          A 
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">burger and fries</span>
+                      </li>
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          B
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">veggie/vegan</span>
+                      </li>
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          C
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">anything ethnic and/or spicy</span>
+                      </li>
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          D
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">the edible kind</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="question-content" >
+                    <p class="question-text">Where do you get your news?</p>
+                    <ul class="answer-list">
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          A
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">the New York Times</span>
+                      </li>
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          B
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">various online sources</span>
+                      </li>
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          C
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">Fox</span>
+                      </li>
+                      <li class="answer-item">
+                        <span class="answer-checkbox">
+                          D
+                          <img src="/icons/quiz/pencilscribbleanswer1.png" alt="">
+                        </span>
+                        <span class="answer-text">I try to avoid the news</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="answer-button-content">
+                    <button class="next-question-button">Next QuestioN</button>
+                    <button class="back-question-button">back</button>
+                  </div>
+                </form>
+              </div>
+              
+              <div class="question-bar">
+                <div class="bar-item"></div>
+              </div>
+              
+            </div>
+
+            
+            <div class="quizComplete-row">
+              <div class="complate-content">
+                <h3 class="complete-title">QUIZ COMPLETE!</h3>
+                <p class="complete-text">
+                  <span>Now you just sit back and wait for the show to start.</span>
+                  <span>We’ll be running our algo-magic to find the most compatible pair in the audience.</span>
+                  <span>Announcement at the end of the show!</span>
+                </p>
+                <div class="yayBtnRow">
+                  <a class="yayBtn">YAY!</a>
+                </div>
+              </div>
+              
+            </div>
+
+
+          </div>
+
+          <div class="timerContainer">
+            <span class="timerLabel">Next Show Starts In:</span>
+            <span class="timer">13 minutes, 10 seconds</span>
+          </div>
+          
+        </div>
+
+        
+      </main>
+      <footer>
+        <div class="footerContainer">
+          <div class="footerLeft">
+            <button class="footerButton">EXIT</button>
+            <button class="footerButtonMobile">
+              <i class="mobilicon closeButton"></i>
+            </button>
+          </div>
+          <div class="footerCenter">
+            <button class="footerButton">
+              <i class="doubleArrow leftArrow"></i> BACK
+            </button>
+            <button class="footerButtonMobile">
+              <i class="mobilicon arrowBack"></i>
+            </button>
+          </div>
+          <div class="footerRight">
+            <button class="footerButton">
+              NEXT <i class="doubleArrow rightArrow"></i>
+            </button>
+            <button class="footerButtonMobile">
+              <i class="mobilicon arrowForwards"></i>
+            </button>
+
+            <!-- <img src="/icons/doubleRightArrow.svg" class="doubleArrow rightArrow" alt=""> -->
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/js/quiz.js"></script>
+  </body>
+</html>

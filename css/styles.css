@@ -53,7 +53,16 @@ a {
 
 .burgundyMode a {
   color: #FEDDDE;
-} 
+}
+
+.greenMode{
+  background-color: #E3FCF8;
+  color: #016F59;
+}
+
+.greenMode a, .greenMode button{
+  color: #016F59;
+}
 
 
 .container {
