@@ -1,0 +1,238 @@
+
+
+body,
+html {
+  height: max-content;
+}
+
+.container{
+  min-height: 100vh;
+  justify-content: start;
+  transition: background-color 0.5s ease-in-out;
+  background: url("/images/scratch/d33280d5e97b50097567815d3d373358.jpeg") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  text-align: unset;
+}
+
+.container .xEquality{
+  position: absolute;
+  display: none;
+}
+
+.mainHeader {
+  /* margin-bottom: 28px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainHeader h1 a {
+  color: #585858;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+main {
+  position: relative;
+}
+
+.sectionContainer {
+  display: flex;
+  width: 100%;
+  margin-top: 46px;
+  justify-content: center;
+}
+
+.sectionContainer .scratchContainer{
+  width: 342px;
+}
+
+.scratchContainer .section-title-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.scratchContainer .section-title-content h3{
+  color: rgba(61, 61, 61, 0.90);
+text-align: center;
+
+/* Mobile Gaegu Header 3 */
+font-family: Gaegu;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: 105%; /* 29.4px */
+
+}
+
+.scratchContainer .messageBox-content{
+  width: 100%;
+  height: 493px;
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border-radius: 8px;
+  gap: 24px;
+  border: 1px solid #585858;
+  background: rgba(244, 244, 244, 0.70);
+  overflow-y: scroll;
+  margin-bottom: 13px;
+}
+
+.scratchContainer .messageBox-content::-webkit-scrollbar {
+  width: 24px; /* Scroll bar genişliği */
+}
+
+.scratchContainer .messageBox-content::-webkit-scrollbar-thumb {
+  
+  border: 8px solid transparent;
+  
+}
+
+.scratchContainer .messageBox-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.10); /* Scroll bar rengi */
+  border-radius: 50px;
+  background-clip: content-box; /* İçerik kutusu ile uyumlu */
+}
+
+
+
+
+.scratchContainer .messageBox-content p{
+  color: #3D3D3D;
+
+/* Inter Body */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+}
+
+.scratchContainer .write-content{
+  width: 100%;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.scratchContainer .write-content input{
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+border: 1px solid #585858;
+outline: none;
+color: rgba(0, 0, 0, 0.80);
+background: rgba(244, 244, 244, 0.70);
+padding: 1px 25px;
+/* Inter Body */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+resize: none;
+display: flex;
+align-items: center;}
+
+.scratchContainer .write-content input::placeholder{
+  color: rgba(0, 0, 0, 0.30);
+}
+
+.scratchContainer .submitBtn-content{
+  width: 100%;
+}
+
+.submitBtn-content .submit-btn{
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid rgba(228, 78, 82, 0.00);
+  background: rgba(88, 88, 88, 0.50);
+  color: #FFF;
+  text-align: center;
+  cursor: pointer;
+  /* Dropdown */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 0.98px;
+  text-transform: uppercase;
+}
+
+.submitBtn-content .submit-btn.active{
+  background: #585858;
+}
+
+@media screen and (max-width: 750px) {
+
+  .container .xEquality{
+    display: block;
+    right: -12px;
+    top: -64px;
+    width: 149.363px;
+height: 176.191px;
+transform: rotate(-21.538deg);
+flex-shrink: 0;
+  }
+
+
+  .mainHeader h1 {
+    margin-top: 23px;
+    margin-left: 24px;
+    font-size: 16px;
+    font-family: Zilla Slab;
+    font-weight: 700;
+    line-height: 20.8px;
+    letter-spacing: 0.96px;
+    word-wrap: break-word;
+  }
+
+  .sectionContainer{
+    margin-top: 20.24px;
+  }
+
+  .sectionContainer .scratchContainer {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .scratchContainer .section-title-content {
+    margin-bottom: 17px;
+  }
+
+  .scratchContainer .messageBox-content {
+    height: 509px;
+    padding: 20px 25px 5px;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .scratchContainer .messageBox-content p .autor{
+    font-weight: 700;
+  }
+
+  .scratchContainer .write-content {
+    margin-bottom: 8px;
+  }
+
+  .scratchContainer .write-content input::placeholder{
+    color: rgba(0, 0, 0, 0.50);
+  }
+
+  .scratchContainer .submitBtn-content {
+    margin-bottom: 60px;
+  }
+
+
+}
