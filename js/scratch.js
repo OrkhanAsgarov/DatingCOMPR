@@ -1,6 +1,7 @@
-const inputField = document.querySelector(".write-content input");
+const inputField = document.querySelector(".fieldMessage");
 const submitButton = document.querySelector(".submit-btn");
 const messageBox = document.querySelector(".messageBox-content");
+const backWelcomePage = document.querySelector(".backWelcomePage");
 
 // 1. Yazı yazarken `submit-btn` butonuna `active` sınıfını ekle
 inputField.addEventListener("input", function () {
@@ -23,7 +24,7 @@ function sendMessage() {
     const newMessage = document.createElement("p");
     newMessage.innerHTML = `<span class="autor">${autorName}: </span><span class="message">${messageText}</span>`;
     messageBox.appendChild(newMessage);
-
+    backWelcomePage.classList.add("active");
     inputField.value = ""; // Giriş alanını temizle
     submitButton.classList.remove("active"); // `active` sınıfını kaldır
     scrollToBottom(); // Scroll'u en alta kaydır

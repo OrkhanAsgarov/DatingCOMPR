@@ -16,14 +16,26 @@ html {
   position: relative;
 }
 
-.container .xEquality{
-  display: none;
+.container .xEquality {
+  position: absolute;
+  display: block;
+  right: 332px;
+  top: -34px;
+  width: 169px;
+  height: 200px;
+  box-sizing: border-box;
 }
 
-.container .xEquality img{
-  width: 100%;
+.container .lovequetion {
+  position: absolute;
+  display: block;
+  right: 52px;
+  top: 12px;
+  transform: rotate(49.148deg);
+  width: 190px;
+  height: 110px;
+  box-sizing: border-box;
 }
-
 .backWelcomePage{
   display: none;
   width: 150px;
@@ -40,6 +52,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 150%; /* 24px */
 }
+
 
 .mainHeader {
   /* margin-bottom: 28px; */
@@ -65,11 +78,66 @@ main {
   display: flex;
   width: 100%;
   margin-top: 46px;
+  align-items: start;
   justify-content: center;
+  gap: 12px;
+  margin-bottom: 85px;
 }
 
+.sectionContainer .watchContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 1156px;
+}
+
+.watchContainer .watch-title-content h3{
+  color: rgba(61, 61, 61, 0.90);
+text-align: center;
+
+/* Gaegu Header 1 */
+font-family: Gaegu;
+font-size: 58px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; /* 63.8px */
+}
+
+.watchContainer .watch-title-content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+
+.watchContainer .watch-video-content{
+  width: 1156px;
+height: 677px;
+background: #D9D9D9;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.watch-video-content .playIcon {
+  display: none;
+  width: 84px;
+  height: 78px;
+  background: url("/icons/watchLivestream/Polygon7.svg") no-repeat center center;
+}
+
+
+
 .sectionContainer .scratchContainer{
-  width: 342px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin: auto 0 0 0;
 }
 
 .scratchContainer .section-title-content{
@@ -77,36 +145,38 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .scratchContainer .section-title-content h3{
   color: rgba(61, 61, 61, 0.90);
 text-align: center;
-
+display: flex;
+height: 27px;
 /* Mobile Gaegu Header 3 */
 font-family: Gaegu;
 font-size: 28px;
 font-style: normal;
-font-weight: 700;
-line-height: 105%; /* 29.4px */
+font-weight: 400;
+line-height: 132%; /* 29.4px */
 
 }
 
 .scratchContainer .messageBox-content{
   width: 100%;
-  height: 493px;
-  padding: 36px 24px;
+  height: 464px;
+  padding: 24px;
+  padding-right: 0;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   border-radius: 8px;
-  gap: 24px;
-  border: 1px solid #585858;
+  gap: 12px;
+  border: 1px solid rgba(61, 61, 61, 0.90);
   background: rgba(244, 244, 244, 0.70);
   overflow-y: scroll;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 }
 
 .scratchContainer .messageBox-content::-webkit-scrollbar {
@@ -129,31 +199,35 @@ line-height: 105%; /* 29.4px */
 
 
 .scratchContainer .messageBox-content p{
+  width: 100%;
   color: #3D3D3D;
-
 /* Inter Body */
 font-family: Inter;
-font-size: 16px;
+font-size: 15.5px;
 font-style: normal;
 font-weight: 400;
-line-height: 150%; /* 24px */
+line-height: 145%; /* 24px */
+}
+
+.scratchContainer .messageBox-content p .autor{
+  font-weight: 600;
 }
 
 .scratchContainer .write-content{
   width: 100%;
-  height: 48px;
+  height: 142px;
   margin-bottom: 12px;
 }
 
-.scratchContainer .write-content input{
+.scratchContainer .write-content textarea{
   width: 100%;
-  height: 48px;
+  height: 142px;
   border-radius: 8px;
 border: 1px solid #585858;
 outline: none;
 color: rgba(0, 0, 0, 0.80);
 background: rgba(244, 244, 244, 0.70);
-padding: 1px 25px;
+padding: 12px 24px;
 /* Inter Body */
 font-family: Inter;
 font-size: 16px;
@@ -161,8 +235,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 150%; /* 24px */
 resize: none;
-display: flex;
-align-items: center;}
+}
 
 .scratchContainer .write-content input::placeholder{
   color: rgba(0, 0, 0, 0.30);
@@ -197,19 +270,22 @@ align-items: center;}
 
 @media screen and (max-width: 750px) {
 
-  .container .xEquality {
-  position: absolute;
-  display: block;
-  right: -20px;
-  top: -80px;
+  .container .lovequetion {
+    display: none;
+}
+
+.container .xEquality {
+  right: -15px;
+  top: -70px;
   width: 150px;
   height: 177px;
   box-sizing: border-box;
-  overflow: hidden; /* Kenar boşlukları ve dolgu, genişliğe ve yüksekliğe dahil edilir */
 }
 
 .backWelcomePage.active{
-  display: block;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 
@@ -228,8 +304,32 @@ align-items: center;}
   }
 
   .sectionContainer{
-    margin-top: 20.24px;
+    margin-top: 36.24px;
+    flex-direction: column;
+    margin-bottom: 0;
   }
+
+  .sectionContainer .watchContainer {
+    width: 100%;
+    padding: 0 16px;
+}
+
+  .watchContainer .watch-title-content h3 {
+    font-size: 28px;
+    line-height: 105%;
+}
+.watchContainer .watch-video-content {
+  width: 100%;
+  height: 200px;
+  background: #D9D9D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.watch-video-content .playIcon {
+  display: block;
+}
 
   .sectionContainer .scratchContainer {
     width: 100%;
@@ -237,25 +337,37 @@ align-items: center;}
   }
 
   .scratchContainer .section-title-content {
-    margin-bottom: 17px;
+    display: none;
   }
 
   .scratchContainer .messageBox-content {
-    height: 509px;
-    padding: 20px 25px 5px;
+    height: 276px;
+    padding: 25px;
+    padding-right: 0;
     gap: 12px;
     margin-bottom: 8px;
   }
+
+  .scratchContainer .messageBox-content p {
+   font-size: 16px;
+    line-height: 150%;
+}
 
   .scratchContainer .messageBox-content p .autor{
     font-weight: 700;
   }
 
+
   .scratchContainer .write-content {
+    height: 48px;
     margin-bottom: 8px;
+}
+
+  .scratchContainer .write-content .fieldMessage{
+    height: 48px;
   }
 
-  .scratchContainer .write-content input::placeholder{
+  .scratchContainer .write-content .fieldMessage::placeholder{
     color: rgba(0, 0, 0, 0.50);
   }
 
