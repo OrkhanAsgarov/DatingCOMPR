@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/buytickets.css" />
   </head>
   <body>
@@ -40,6 +41,124 @@
     </div>
 
     <div class="container pinkMode">
+
+      <div class="login-container">
+        <div class="login-content active">
+          <img src="/icons/XButtonLogin.svg" class="closeLogin" />
+          <h3>LOGIN</h3>
+          <span class="loginMessage">Hey, you! Welcome back!</span>
+          <form>
+            <div class="form-row">
+              <label >Username:</label>
+              <input id="loginUsername" type="text" placeholder="username">
+            </div>
+            <div class="form-row password">
+              <label >Password:</label>
+              <input id="loginPassword" type="password" placeholder="password">
+            </div>
+            <div class="form-button-row">
+                <button id="loginBtn" class="submit-login">LEMME IN!</button>
+                <a class="forgetPassword" href="#">Did you forget your password?</a>
+                <span>Haven’t registered? <a class="registerLink" href="#">Register here.</a></span>
+            </div>
+          </form>
+        </div>
+        <div class="password-reset-content">
+          <img src="/icons/XButtonLogin.svg" class="closeLogin" />
+
+          <div class="send-mail-content">
+            <h3>RESET YOUR <br/> PASSWORD</h3>
+            <span class="loginMessage">Sometimes we forget things.</span>
+            <form>
+              <div class="form-row password">
+                <label >Your Email:</label>
+                <input type="email" placeholder="email@address.com">
+              </div>
+              <div class="form-button-row">
+                  <button id="sendMail" class="submit-login">LEMME IN!</button>
+                  <a href="#">Wait, actually I remembered...</a>
+              </div>
+            </form>
+          </div>
+
+          <div class="confirm-wait-content">
+            <h3>ALMOST THERE...</h3>
+            <span class="loginMessage">Now go check your email <br/> to reset your password.</span>
+          </div>
+          
+          <div class="new-password-content">
+            <h3>CHOOSE A NEW <br/> PASSWORD</h3>
+            <span class="loginMessage">Don’t forget this time, okay?</span>
+            <form>
+              <div class="form-row">
+                <label >Password:</label>
+                <input type="password" placeholder="your new password">
+              </div>
+              <div class="form-row confirm">
+                <label >Confirm:</label>
+                <input type="password" placeholder="confirm new password">
+              </div>
+              <div class="form-button-row">
+                  <button id="changePassword" class="submit-login">LEMME IN!</button>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+        <div class="register-content">
+          <img src="/icons/XButtonLogin.svg" class="closeLogin" />
+
+          <div class="register-form-content">
+            <h3>AUDIENCE <br/> REGISTRATION FORM</h3>
+            <span class="loginMessage">First you gotta register to buy a ticket!</span>
+            <form>
+              <div class="form-row">
+                <label >Name:</label>
+                <div class="name-input-content">
+                  <input class="firstNameInput" type="text" placeholder="First">
+                  <input class="lastNameInput" type="text" placeholder="Last">
+                </div>
+              </div>
+              <div class="form-row">
+                <label >Email:</label>
+                <input type="email" placeholder="email@address.com">
+              </div>
+              <div class="form-row">
+                <label >Username:</label>
+                <input type="text" placeholder="maximum X characters">
+              </div>
+              <div class="form-row">
+                <label >Password:</label>
+                <input class="registerPassword" type="password" placeholder="new password">
+              </div>
+              <div class="form-row confirm">
+                <label >Confirm:</label>
+                <input class="registerConfirm" type="password" placeholder="type your password again">
+              </div>
+
+              <div class="form-row captcha">
+                <!-- Diğer form alanları -->
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                <input style="display: none;" type="submit" value="Submit">
+              </div>
+                
+            
+            
+              <div class="form-button-row">
+                  <button id="newRegister" class="submit-login">LEMME IN!</button>
+                  <span>Already registered? <a href="#">Login here.</a></span>
+              </div>
+            </form>
+          </div>
+          
+          <div class="passed-content">
+            <h3>YOU PASSED!</h3>
+            <span class="passedMessage">Now go <span class="boldMessage">confirm your email address</span> <br>so we can get started.</span>
+          </div>
+        </div>
+
+      </div>
+
       <header class="mainHeader">
         <h1>
           <a href="home.html" class="primaryColor"
@@ -47,10 +166,18 @@
             Comprehension</a
           >
         </h1>
-        <img
-          src="/icons/buytickets/btnHamburgerRed.svg"
-          class="hamburgerMenu"
-        />
+        <div class="menu-content">
+          <div class="profile-content">
+            <button class="btn-profile"></button>
+            <button class="btn-logout"><i></i></button>
+
+          </div>
+          <button class="btn-login">
+            <span>LOGIN</span>
+            <i></i>
+          </button>
+          <img src="/icons/hamburgerMenu.svg" class="hamburgerMenu" />
+        </div>
       </header>
 
       <main>
@@ -155,35 +282,12 @@
           <a class="quizLinkMobile" href="./quiz.html">GO TO QUIZ</a>
         </div>
       </main>
-      <footer>
-        <div class="footerContainer">
-          <div class="footerLeft">
-            <button class="footerButton">EXIT</button>
-            <button class="footerButtonMobile">
-              <i class="mobilicon closeButton"></i>
-            </button>
-          </div>
-          <div class="footerCenter">
-            <button class="footerButton">
-              <i class="doubleArrow leftArrow"></i> BACK
-            </button>
-            <button class="footerButtonMobile">
-              <i class="mobilicon arrowBack"></i>
-            </button>
-          </div>
-          <div class="footerRight">
-            <button class="footerButton">
-              NEXT <i class="doubleArrow rightArrow"></i>
-            </button>
-            <button class="footerButtonMobile">
-              <i class="mobilicon arrowForwards"></i>
-            </button>
-
-            <!-- <img src="/icons/doubleRightArrow.svg" class="doubleArrow rightArrow" alt=""> -->
-          </div>
-        </div>
-      </footer>
+      
     </div>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script src="/js/login.js"></script>
     <script src="/js/buytickets.js"></script>
   </body>
 </html>

@@ -293,6 +293,11 @@ input.lastNameInput{width: 145px;}
 
 .mainHeader {
   margin-bottom: 22px;
+  padding: 24px 32px 0;
+}
+
+.mainHeader h1{
+    margin-top: 0;
 }
 
 .mainHeader .profile-content{
@@ -301,7 +306,7 @@ input.lastNameInput{width: 145px;}
 
 .mainHeader .profile-content.active{
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 6px;
 }
 
@@ -310,7 +315,6 @@ input.lastNameInput{width: 145px;}
   border: none;
   outline: none;
   background-color: transparent;
-  padding-top: 24px;
   width: 220.854px;
 height: auto;
 color: #204165;
@@ -335,18 +339,19 @@ letter-spacing: 1.44px;
 }
 
 .mainHeader .btn-logout{
-padding-top: 24px;
+padding-top: 0;
 border: none;
 background-color: transparent;
 outline: none;
 cursor: pointer;
 }
 
+
 .btn-logout i {
   display: inline-block;
   background: url("/icons/logout.png") no-repeat center center;
   width: 32px;
-  height: 32px;
+  height: 22px;
 
 }
 
@@ -396,11 +401,15 @@ main {
       top: 0;
       left: 0;
       z-index: 99;
+      justify-content: space-between;
+      align-items: start;
+      padding: 23px 16px 0;
     }
   
     .mainHeader h1 {
-      margin-top: 23px;
-      margin-left: 16px;
+        width: auto;
+      margin-top: 0;
+      margin-left: 0;
       font-size: 16px;
       font-family: Zilla Slab;
       font-weight: 700;
@@ -408,10 +417,42 @@ main {
       letter-spacing: 0.96px;
       word-wrap: break-word;
     }
-  
-    .btn-login{
-      display: none;
+
+    .menu-content {
+        display: flex;
+        gap: 8px;
+        align-items: start;
     }
+
+    .mainHeader .btn-profile{
+        display: none;
+    }
+
+    .mainHeader .btn-login {
+        width: auto;
+        padding: 0;
+    }
+
+    .mainHeader .btn-login i{
+        display: inline-block;
+        font-size: 16px;
+        width: 32px;
+        height: 23px;
+    }
+
+    .btn-login span{
+        display: none;
+      }
+
+      .btn-login i {
+        background: url("/icons/login.svg") no-repeat center center;
+      }
+
+    .login-content, .password-reset-content, .register-content {
+        width: 90%;
+    }
+  
+    
   
     .profile-content{
       display: none;
@@ -419,10 +460,10 @@ main {
   
     .hamburgerMenu {
       display: block;
-      margin-top: 23px;
+      margin-top: 0;
       width: 32px;
       height: 22px;
-      margin-right: 16px;
+      margin-right: 0;
     }
   
     .leftMenu {
@@ -445,6 +486,8 @@ main {
       width: 100%;
       text-align: left;
     }
+
+
     
   
     

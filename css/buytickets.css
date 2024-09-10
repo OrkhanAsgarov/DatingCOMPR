@@ -1,68 +1,32 @@
-
-
 body,
 html {
   height: max-content;
 }
 
-.pinkMode, .pinkMode a, .pinkMode button {
+.pinkMode,
+.pinkMode a,
+.pinkMode button {
   color: #E44E52;
 }
 
-.mobilMenuContainer {
-  position: relative;
+.mobileDateTime {
+  width: 224px;
+  height: 264px;
+  border-radius: 8px;
+  border: 1px solid #CA6D70;
+  background: rgba(228, 78, 82, 0.95);
+  position: fixed;
+  left: 50%;
+  top: 255px;
+  transform: translateX(-50%);
+  z-index: 5;
   display: none;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.mobilMenuContainer .closeMenu {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  cursor: pointer;
-}
-
-.mobilMenu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  height: 286px;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-}
-
-.mobilItem {
-  font-size: 36px;
-  font-family: Gaegu;
-  font-weight: 700;
-  line-height: 39.6px;
-  word-wrap: break-word;
-  cursor: pointer;
-}
-
- .mobileDateTime{
-  width: 224px;
-height: 264px;
-border-radius: 8px;
-border: 1px solid #CA6D70;
-background: rgba(228, 78, 82, 0.95);
-position: fixed;
-left: 50%;
-top: 255px;
-transform: translateX(-50%);
-z-index: 5;
-display: none;
-flex-direction: column;
-align-items: center;
 }
 
 
- .mobileDateTime .closeMobilDateTime {
+.mobileDateTime .closeMobilDateTime {
   display: flex;
   justify-content: end;
   width: 100%;
@@ -71,27 +35,28 @@ align-items: center;
   margin-bottom: 23px;
 }
 
- .mobileDateTime .closeMobilDateTime i{
+.mobileDateTime .closeMobilDateTime i {
   width: 17px;
   height: 17px;
   background: url("/icons/buytickets/closeDateRedMobile.svg") no-repeat center center;
 }
 
- .mobileDateTime .selectedMobileDate {
+.mobileDateTime .selectedMobileDate {
   width: 100%;
   color: #FCBBBD;
 
-text-align: center;
-/* Mobile Gaegu Header 2 */
-font-family: Gaegu;
-font-size: 22px;
-font-style: normal;
-font-weight: 400;
-line-height: 120%; /* 26.4px */
-margin-bottom: 23px;
+  text-align: center;
+  /* Mobile Gaegu Header 2 */
+  font-family: Gaegu;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  /* 26.4px */
+  margin-bottom: 23px;
 }
 
- .mobileDateTime .hourContainer {
+.mobileDateTime .hourContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -102,91 +67,47 @@ margin-bottom: 23px;
   margin-bottom: 39px;
 }
 
- .mobileDateTime .hourContainer .hour {
+.mobileDateTime .hourContainer .hour {
   width: 100%;
 
   color: #FCBBBD;
 
-text-align: center;
-/* Mobile Gaegu header 1 */
-font-family: Gaegu;
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%; /* 39.6px */
+  text-align: center;
+  /* Mobile Gaegu header 1 */
+  font-family: Gaegu;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  /* 39.6px */
 }
 
- .mobileDateTime .hourContainer .hour.selected {
+.mobileDateTime .hourContainer .hour.selected {
   border-radius: 2px;
-border: 1px solid #FFF;
-color: #FFF;
-text-align: center;
-font-family: Gaegu;
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%; /* 39.6px */
+  border: 1px solid #FFF;
+  color: #FFF;
+  text-align: center;
+  font-family: Gaegu;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  /* 39.6px */
 }
 
- .mobileDateTime .selectFooter{
+.mobileDateTime .selectFooter {
   position: absolute;
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   color: #FCBBBD;
-text-align: center;
-font-family: Gaegu;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 145%; /* 20.3px */
-}
-
-.mainHeader {
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hamburgerMenu {
-  display: none;
-  cursor: pointer;
-}
-
-main {
-  position: relative;
-}
-
-.leftMenu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 156px;
-  height: 252px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: fixed;
-  left: 32px;
-  bottom: 60px;
-}
-
-.menuItem {
-  width: 160px;
-  height: 42px;
-  font-size: 16px;
-  font-family: Inter, sans-serif;
-  font-weight: 600;
-  line-height: 22.4px;
-  letter-spacing: 1.44px;
-  word-wrap: break-word;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  cursor: pointer;
+  text-align: center;
+  font-family: Gaegu;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%;
+  /* 20.3px */
 }
 
 .sectionContainer {
@@ -208,7 +129,8 @@ main {
   font-size: 72px;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%; /* 79.2px */
+  line-height: 110%;
+  /* 79.2px */
 }
 
 .sectionContainer .calendarContainer {
@@ -220,7 +142,7 @@ main {
   margin-bottom: 32px;
 }
 
-.calendarContainer .monthContainer{
+.calendarContainer .monthContainer {
   width: 100%;
   display: flex;
   align-items: center;
@@ -229,25 +151,26 @@ main {
   margin-bottom: 12px;
 }
 
-.calendarContainer .monthContainer .monthArrow{
+.calendarContainer .monthContainer .monthArrow {
   width: 15px;
-height: 16px;
-display: block;
+  height: 16px;
+  display: block;
 }
 
-.calendarContainer .monthContainer .leftArrowMonth{
+.calendarContainer .monthContainer .leftArrowMonth {
   background: url("/icons/buytickets/ArrowsLeftRed.svg") no-repeat center center;
 }
 
-.calendarContainer .monthContainer .rightArrowMonth{
+.calendarContainer .monthContainer .rightArrowMonth {
   background: url("/icons/buytickets/ArrowsRightRed.svg") no-repeat center center;
 }
 
 .calendarContainer .monthContainer span {
   font-size: 42px;
-font-style: normal;
-font-weight: 700;
-line-height: 145%; /* 60.9px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 145%;
+  /* 60.9px */
 }
 
 .calendarContainer .dayContainer {
@@ -258,13 +181,14 @@ line-height: 145%; /* 60.9px */
   gap: 9px;
 }
 
-.calendarContainer .dayContainer .dayItem{
+.calendarContainer .dayContainer .dayItem {
   width: 100%;
   font-size: 23px;
-font-style: normal;
-font-weight: 400;
-line-height: 145%; /* 33.35px */
-text-transform: lowercase;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%;
+  /* 33.35px */
+  text-transform: lowercase;
 }
 
 .calendarContainer .dateContainer {
@@ -296,7 +220,7 @@ text-transform: lowercase;
 
 .calendarContainer .dateContainer .dateItem.selected {
   background: #E44E52;
-  
+
 }
 
 .calendarContainer .dateContainer .dateItem.empityBox {
@@ -312,7 +236,8 @@ text-transform: lowercase;
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
-  line-height: 145%; /* 33.35px */
+  line-height: 145%;
+  /* 33.35px */
 }
 
 .dateContainer .dateItem .dateTime {
@@ -323,12 +248,13 @@ text-transform: lowercase;
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
-  line-height: 145%; /* 33.35px */
+  line-height: 145%;
+  /* 33.35px */
 }
 
 .dateContainer .dateItem.selected .dateTime {
   color: #FEDDDE;
-} 
+}
 
 .sectionContainer .buyButtonContainer {
   width: 100%;
@@ -365,13 +291,14 @@ text-transform: lowercase;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 140%; /* 19.6px */
+  line-height: 140%;
+  /* 19.6px */
   letter-spacing: 0.98px;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-.buyButtonContainer .dropdownBtn > span{
+.buyButtonContainer .dropdownBtn>span {
   display: block;
   width: 222px;
   height: 46px;
@@ -382,7 +309,7 @@ text-transform: lowercase;
 }
 
 .buyButtonContainer .dropdownBtn .choosen {
-border-bottom: 1px solid #CA6D70;
+  border-bottom: 1px solid #CA6D70;
 }
 
 .buyButtonContainer .dropdownBtn .dropdownVector {
@@ -392,21 +319,21 @@ border-bottom: 1px solid #CA6D70;
   right: 17px;
   transform: translateY(-50%);
   width: 15px;
-height: 13px;
+  height: 13px;
 }
 
-.buyButtonContainer .dropdownBtn .dropdownVector.rotated{
+.buyButtonContainer .dropdownBtn .dropdownVector.rotated {
   transform: translateY(-50%) rotate(180deg);
 }
 
 .buyButtonContainer .dropdownBtn .online,
-.buyButtonContainer .dropdownBtn .inperson{
+.buyButtonContainer .dropdownBtn .inperson {
   display: none;
   cursor: pointer;
 }
 
 .buyButtonContainer .dropdownBtn .online:hover,
-.buyButtonContainer .dropdownBtn .inperson:hover{
+.buyButtonContainer .dropdownBtn .inperson:hover {
   background-color: #FCBBBD;
   border-radius: 0 0 8px 8px;
 }
@@ -427,7 +354,8 @@ height: 13px;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 140%; /* 19.6px */
+  line-height: 140%;
+  /* 19.6px */
   letter-spacing: 0.98px;
   text-transform: uppercase;
   cursor: pointer;
@@ -436,7 +364,7 @@ height: 13px;
 .buyButtonContainer .buyBtn.active {
   border: 1px rgba(254, 221, 222, 0.00);
   color: #FEDDDE;
-background: #E44E52;
+  background: #E44E52;
 }
 
 
@@ -450,7 +378,7 @@ background: #E44E52;
   gap: 48px;
 }
 
-.instructionsController .instructionsRow{
+.instructionsController .instructionsRow {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -464,30 +392,35 @@ background: #E44E52;
   width: 100%;
   text-align: center;
   font-size: 42px;
-font-style: normal;
-font-weight: 400;
-line-height: 145%; /* 60.9px */
-margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%;
+  /* 60.9px */
+  margin-bottom: 10px;
 }
 
-.instructionsRow ul.instructionsList{
-  overflow-wrap: break-word; /* Taşarsa alt satıra geçmesini sağlar */
+.instructionsRow ul.instructionsList {
+  overflow-wrap: break-word;
+  /* Taşarsa alt satıra geçmesini sağlar */
   padding-left: 16px;
 }
 
-.instructionsRow  ul.instructionsList {
-  list-style-type: decimal; /* Numaralı liste için */
-  overflow-wrap: break-word; /* Taşarsa alt satıra geçmesini sağlar */
+.instructionsRow ul.instructionsList {
+  list-style-type: decimal;
+  /* Numaralı liste için */
+  overflow-wrap: break-word;
+  /* Taşarsa alt satıra geçmesini sağlar */
   padding-left: 28px;
   margin-bottom: 20px;
 }
 
 .instructionsRow .instructionsText,
-.instructionsRow .instructionsItem  {
+.instructionsRow .instructionsItem {
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
-  line-height: 145%; /* 33.35px */
+  line-height: 145%;
+  /* 33.35px */
 }
 
 .checkoutContainer {
@@ -501,205 +434,70 @@ margin-bottom: 10px;
 .checkoutContainer .checkoutText {
   width: 540px;
   color: #E44E52;
-text-align: center;
+  text-align: center;
 
-/* Gaegu Header 1 */
-font-family: Gaegu;
-font-size: 72px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%; /* 79.2px */
+  /* Gaegu Header 1 */
+  font-family: Gaegu;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  /* 79.2px */
 }
 
 .checkoutContainer .checkoutTextMobile,
-.checkoutContainer .quizLinkMobile{
+.checkoutContainer .quizLinkMobile {
   display: none;
 }
 
-.footerContainer {
-  width: 100%;
-  height: 42px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;
-  backdrop-filter: blur(5px);
-  border: 1px solid;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 14px;
-  left: 0;
-  z-index: 2;
-}
-
-.footerLeft,
-.footerRight {
-  width: 277px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-}
-
-.footerLeft {
-  padding-left: 32px;
-}
-
-.footerRight {
-  justify-content: end;
-  gap: 10px;
-  padding-right: 16px;
-}
-
-.footerCenter {
-  width: 100%;
-  height: 42px;
-  padding-left: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-  font-family: Inter;
-  font-weight: 600;
-  line-height: 22.4px;
-  letter-spacing: 1.44px;
-  word-wrap: break-word;
-  border-left: 1px solid;
-  border-right: 1px solid;
-}
-
-.footerButtonMobile {
-  display: none;
-}
-
-.footerButton {
-  font-size: 16px;
-  font-family: Inter;
-  font-weight: 600;
-  line-height: 22.4px;
-  letter-spacing: 1.44px;
-  word-wrap: break-word;
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  cursor: pointer;
-}
-
-.doubleArrow {
-  width: 10px;
-  height: 16px;
-}
-
-.leftArrow {
-  background: url("/icons/buytickets/ArrowsLeftRedFooter.svg") no-repeat center center;
-}
-
-.rightArrow {
-  background: url("/icons/buytickets/ArrowsRigtRedFooter.svg") no-repeat center center;
-}
 
 @media screen and (max-width: 750px) {
 
+  .sectionContainer {
+    margin-bottom: 90px;
+    margin-top: 90px;
 
-  .mainHeader {
-    margin-bottom: 41px;
   }
-
-  .mainHeader h1 {
-    margin-top: 23px;
-    margin-left: 16px;
-    font-size: 16px;
-    font-family: Zilla Slab;
-    font-weight: 700;
-    line-height: 20.8px;
-    letter-spacing: 0.96px;
-    word-wrap: break-word;
-  }
-
-  .hamburgerMenu {
-    display: block;
-    width: 32px;
-    height: 22px;
-    margin-right: 16px;
-  }
-
-  .leftMenu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background: #cadef7;
-    z-index: 1000;
-    padding-top: 60px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  .menuItem {
-    padding: 10px 20px;
-    width: 100%;
-    text-align: left;
-  }
-
-  /* .mobileDateTime{
-    width: 224px;
-  height: 264px;
-  border-radius: 8px;
-  border: 1px solid #CA6D70;
-  background: rgba(228, 78, 82, 0.95);
-  position: fixed;
-  left: 50%;
-  top: 255px;
-  transform: translateX(-50%);
-  z-index: 5;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  } */
+  
   .sectionContainer .titlePage {
     margin-bottom: 13px;
   }
+
   .sectionContainer .titlePage h2 {
     font-size: 36px;
   }
 
-  .sectionContainer .calendarContainer{
+  .sectionContainer .calendarContainer {
     width: 100%;
     padding: 0 17px;
     margin-bottom: 25px;
   }
 
-  .calendarContainer .monthContainer{
+  .calendarContainer .monthContainer {
     gap: 15px;
     margin-bottom: 8px;
   }
-  
-  .calendarContainer .monthContainer .monthArrow{
+
+  .calendarContainer .monthContainer .monthArrow {
     width: 10px;
-  height: 12px;
+    height: 12px;
   }
-  
-  .calendarContainer .monthContainer .leftArrowMonth{
+
+  .calendarContainer .monthContainer .leftArrowMonth {
     background: url("/icons/buytickets/ArrowsLeftRedMobile.svg") no-repeat center center;
   }
-  
-  .calendarContainer .monthContainer .rightArrowMonth{
+
+  .calendarContainer .monthContainer .rightArrowMonth {
     background: url("/icons/buytickets/ArrowsRightRedMobile.svg") no-repeat center center;
   }
 
-  .calendarContainer .monthContainer span{
+  .calendarContainer .monthContainer span {
     font-size: 24px;
     font-weight: 400;
     line-height: 110%;
   }
 
-  .calendarContainer .dayContainer{
+  .calendarContainer .dayContainer {
     gap: 3px;
   }
 
@@ -707,31 +505,31 @@ line-height: 110%; /* 79.2px */
     text-transform: capitalize;
   }
 
-  .calendarContainer .dateContainer{
+  .calendarContainer .dateContainer {
     gap: 3px;
   }
 
-  .calendarContainer .dateContainer .dateItem{
+  .calendarContainer .dateContainer .dateItem {
     width: 46px;
     height: 62.50px;
   }
-  
-  .dateContainer .dateItem .dateOfMonth{
+
+  .dateContainer .dateItem .dateOfMonth {
     position: unset;
     color: #E44E52;
     font-size: 24px;
     line-height: 110%;
   }
 
-  .dateContainer .dateItem.selected .dateOfMonth{
+  .dateContainer .dateItem.selected .dateOfMonth {
     color: #FEDDDE;
   }
 
-  .dateContainer .dateItem .dateTime{
+  .dateContainer .dateItem .dateTime {
     display: none;
   }
 
-  .sectionContainer .buyButtonContainer{
+  .sectionContainer .buyButtonContainer {
     padding: 0 17px;
     height: 104px;
     margin-bottom: 79px;
@@ -744,7 +542,8 @@ line-height: 110%; /* 79.2px */
     position: relative;
     gap: 8px;
   }
-  .buyButtonContainer .dropdownBtn{
+
+  .buyButtonContainer .dropdownBtn {
     width: 100%;
     position: absolute;
     top: 0;
@@ -756,11 +555,11 @@ line-height: 110%; /* 79.2px */
     background: url("/icons/buytickets/VectorDownRedMobile.svg") no-repeat center center;
   }
 
-  .buyButtonContainer .dropdownBtn span{
+  .buyButtonContainer .dropdownBtn span {
     width: 100%;
   }
 
-  .buyButtonContainer .buyBtn{
+  .buyButtonContainer .buyBtn {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -768,7 +567,7 @@ line-height: 110%; /* 79.2px */
     z-index: 1;
   }
 
-  .sectionContainer .instructionsController{
+  .sectionContainer .instructionsController {
     padding: 0 15px;
     width: 100%;
     gap: 56px;
@@ -777,18 +576,21 @@ line-height: 110%; /* 79.2px */
   .instructionsRow .instructionsTitle {
     font-size: 36px;
     font-weight: 700;
-    line-height: 110%; /* 39.6px */
+    line-height: 110%;
+    /* 39.6px */
     margin-bottom: 19px;
   }
 
-  .instructionsRow .instructionsText, 
+  .instructionsRow .instructionsText,
   .instructionsRow .instructionsItem {
     font-size: 19px;
-    line-height: 122%; /* 23.18px */
+    line-height: 122%;
+    /* 23.18px */
     letter-spacing: 0.19px;
     margin-bottom: 10px;
   }
-/* 
+
+  /* 
   .sectionContainer {
     margin-bottom: 129px;
   } */
@@ -799,105 +601,36 @@ line-height: 110%; /* 79.2px */
     justify-content: start;
     padding-top: 120px;
   }
-  
+
   .checkoutContainer .checkoutText {
     display: none;
   }
-  
-  .checkoutContainer .checkoutTextMobile{
+
+  .checkoutContainer .checkoutTextMobile {
     display: block;
     color: #E44E52;
-text-align: center;
+    text-align: center;
 
-/* Mobile Gaegu header 1 */
-font-family: Gaegu;
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%; /* 39.6px */
+    /* Mobile Gaegu header 1 */
+    font-family: Gaegu;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    /* 39.6px */
   }
-  .checkoutContainer .quizLinkMobile{
+
+  .checkoutContainer .quizLinkMobile {
     display: block;
     color: #E44E52;
-text-align: center;
-font-family: Gaegu;
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%; /* 39.6px */
-text-decoration-line: underline;
+    text-align: center;
+    font-family: Gaegu;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    /* 39.6px */
+    text-decoration-line: underline;
   }
 
-  .footerContainer {
-    padding-top: 0;
-    height: 73px;
-    margin-bottom: 0;
-    border: none;
-    border-top: 2px solid;
-    bottom: 0;
-  }
-
-
-  .footerLeft,
-  .footerRight {
-    width: 55px;
-    height: auto;
-  }
-
-  .footerLeft {
-    padding-left: 23px;
-  }
-
-  .footerRight {
-    padding-right: 29px;
-  }
-
-  .footerCenter {
-    border: none;
-    height: auto;
-    padding-left: 35px;
-  }
-
-  .footerButtonMobile {
-    display: none;
-  }
-
-  .footerButton {
-    display: none;
-  }
-
-  .footerButtonMobile {
-    display: block;
-    font-size: 16px;
-    font-family: Inter;
-    font-weight: 600;
-    line-height: 22.4px;
-    letter-spacing: 1.44px;
-    word-wrap: break-word;
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .mobilicon {
-    width: 28px;
-    height: 24px;
-  }
-
-  .closeButton {
-    background: url("/icons/buytickets/closeRedFooterMobile.svg") no-repeat center center;
-  }
-
-  .arrowBack {
-    background: url("/icons/buytickets/ArrowsLeftRedFooterMobile.svg") no-repeat center center;
-  }
-
-  .arrowForwards {
-    background: url("/icons/buytickets/ArrowsRighRedFooterMobile.svg") no-repeat center center;
-  }
 }

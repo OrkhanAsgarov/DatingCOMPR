@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const noteBtnContainer = document.querySelector(".noteBtnContainer");
   const recentNotes = document.querySelector(".recentNotes");
   const header = document.querySelector("header");
-  const footer = document.querySelector("footer");
 
   const yearbookImages = document.querySelectorAll(".yearbookContainer .content img");
 
@@ -49,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
       if (window.innerWidth <= 750) {
         header.style.display = 'none'; // Hide header
-        footer.style.display = 'none'; // Hide footer
         xButton.classList.add("mobileView");
       }
 
@@ -64,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (window.innerWidth <= 750) {
       header.style.display = 'flex'; // Show header
-      footer.style.display = 'flex'; // Show footer
       xButton.classList.remove("mobileView");
     }
   });
