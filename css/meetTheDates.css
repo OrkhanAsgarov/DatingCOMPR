@@ -105,6 +105,26 @@ html {
   background: url("../icons/xbuttonWithoutBg.svg") no-repeat center center;
 }
 
+
+
+.selectedRow .backVideoBtn,
+.selectedRow .nextVideoBtn {
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  bottom: 24px;
+  background: url("../icons/backVideoBtn.svg") no-repeat center center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.selectedRow .nextVideoBtn{
+  left: unset;
+  right: 15px;
+  background: url("../icons/nextVideoBtn.svg") no-repeat center center;
+}
+
 .videoContainer {
   display: flex;
   flex-direction: column;
@@ -342,7 +362,10 @@ html {
   .sectionContainer {
     margin-bottom: 90px;
     margin-top: 90px;
+  }
 
+  .sectionContainer.videoOpen {
+    margin: 0;
   }
 
   .sectionContainer .sectionRow {

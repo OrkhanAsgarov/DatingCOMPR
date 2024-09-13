@@ -1,10 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
     var username = "orkhan";
     var password = 123;
+
     const headerLoginBtn = document.querySelector(".btn-login");
     const headerLogoutBtn = document.querySelector(".btn-logout");
     const headerProfileBtn = document.querySelector(".btn-profile");
     const profileContent = document.querySelector(".profile-content");
+    const iRemember = document.querySelector(".iremember");
+    const already = document.querySelector(".already");
+    
 
     
 
@@ -30,6 +34,18 @@ document.addEventListener("DOMContentLoaded", function() {
       document.querySelector(".password-reset-content").classList.add("active");
       document.querySelector(".send-mail-content").classList.add("active");
     });
+
+    iRemember.addEventListener("click", function(e){
+        e.preventDefault();
+        document.querySelector(".login-content").classList.add("active");
+        document.querySelector(".password-reset-content").classList.remove("active");
+    });
+
+    already.addEventListener("click", function(e){
+      e.preventDefault();
+      document.querySelector(".login-content").classList.add("active");
+      document.querySelector(".register-content").classList.remove("active");
+  });
 
     //  "Register here." tıklandığında
     document.querySelector(".login-content .registerLink").addEventListener("click", function(e) {

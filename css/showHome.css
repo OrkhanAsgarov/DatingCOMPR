@@ -147,21 +147,49 @@
   word-wrap: break-word;
 }
 
-.showStart, .showStartlink{
+/* .showStart, .showStartlink{
   color: #E44E52;
 text-align: center;
 
-/* Zilla Header 3 */
 font-family: "Zilla Slab";
 font-size: 36px;
 font-style: normal;
 font-weight: 500;
-line-height: 130%; /* 46.8px */
+line-height: 130%; 
 }
 
 .showStartlink{
   text-decoration: underline;
   color: #E44E52;
+} */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.showStartlink {
+  animation: blink 4s infinite;
+}
+
+.showStartlink{
+  color: #204165;
+text-align: center;
+
+/* Zilla Header 1 */
+font-family: "Zilla Slab";
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; /* 61.6px */
+letter-spacing: 1.68px;
+text-decoration-line: underline;
 }
 
 
