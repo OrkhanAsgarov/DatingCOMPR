@@ -41,7 +41,7 @@ submitButton.addEventListener("click", function () {
     leaveContainer.style.display = 'none';
     succesContainer.style.display = 'flex';
     // recentNotes.innerHTML += nameInput.value + ": " + noteText.value;
-    recentNotes.innerHTML += `<span>${nameInput.value}: ${noteText.value}</span>`;
+    recentNotes.innerHTML += `<span> <b>${nameInput.value}:</b> ${noteText.value}</span>`;
   } 
   
 })

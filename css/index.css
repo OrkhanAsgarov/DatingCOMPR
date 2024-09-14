@@ -407,6 +407,72 @@ main {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1200px){
+
+  .profile-content {
+    display: none;
+  }
+
+  .menu-content {
+    display: flex;
+    gap: 8px;
+    align-items: start;
+  }
+
+  .hamburgerMenu {
+    display: block;
+    margin-top: 0;
+    width: 32px;
+    height: 22px;
+    margin-right: 0;
+  }
+
+  .leftMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: #cadef7;
+    z-index: 1000;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .menuItem {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .btn-login span {
+    display: none;
+  }
+
+  .btn-login i {
+    background: url("/icons/login.svg") no-repeat center center;
+  }
+
+  .mainHeader .btn-profile {
+    display: none;
+  }
+
+  .mainHeader .btn-login {
+    width: auto;
+    padding: 0;
+  }
+
+  .mainHeader .btn-login i {
+    display: inline-block;
+    font-size: 16px;
+    width: 32px;
+    height: 23px;
+  } 
+}
+
 @media screen and (max-width: 750px) {
   .mainHeader {
     margin-bottom: 0;
@@ -431,35 +497,11 @@ main {
     word-wrap: break-word;
   }
 
-  .menu-content {
-    display: flex;
-    gap: 8px;
-    align-items: start;
-  }
+  
 
-  .mainHeader .btn-profile {
-    display: none;
-  }
+  
 
-  .mainHeader .btn-login {
-    width: auto;
-    padding: 0;
-  }
-
-  .mainHeader .btn-login i {
-    display: inline-block;
-    font-size: 16px;
-    width: 32px;
-    height: 23px;
-  }
-
-  .btn-login span {
-    display: none;
-  }
-
-  .btn-login i {
-    background: url("/icons/login.svg") no-repeat center center;
-  }
+  
 
   .login-content.active,
   .password-reset-content.active {
@@ -514,39 +556,7 @@ main {
     margin-bottom: 20px;
 }
 
-  .profile-content {
-    display: none;
-  }
-
-  .hamburgerMenu {
-    display: block;
-    margin-top: 0;
-    width: 32px;
-    height: 22px;
-    margin-right: 0;
-  }
-
-  .leftMenu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background: #cadef7;
-    z-index: 1000;
-    padding-top: 60px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  .menuItem {
-    padding: 10px 20px;
-    width: 100%;
-    text-align: left;
-  }
-
+  
 
 
 

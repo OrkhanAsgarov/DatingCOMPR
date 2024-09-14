@@ -175,7 +175,7 @@ line-height: 130%;
 }
 
 .showStartlink {
-  animation: blink 4s infinite;
+  animation: blink 1s infinite;
 }
 
 .showStartlink{
@@ -202,12 +202,12 @@ text-decoration-line: underline;
     width: 100%;
     height: auto;
     padding: 0 8px;
-    margin-top: 96px;
+    margin-top: 152px;
     margin-bottom: 37px;
   }
 
   .mainBox {
-    width: 359px;
+    width: 100%;
     height: 446px;
     box-sizing: border-box;
     margin-bottom: 8px;
@@ -270,7 +270,7 @@ text-decoration-line: underline;
   }
 
   .nextShowContainer {
-    width: 360px;
+    width: 100%;
     height: 112px;
     padding: 21px 0 22px;
     box-sizing: border-box;
@@ -319,4 +319,10 @@ text-decoration-line: underline;
 
   
   
+}
+
+@media screen and (max-width: 411px) {
+  .showHomeContainer {
+    margin-top: 96px;
+  }
 }

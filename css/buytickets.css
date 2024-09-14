@@ -218,6 +218,10 @@ html {
   cursor: pointer;
 }
 
+.selected-time {
+  text-decoration: underline; /* Altını çizmek için */
+}
+
 .calendarContainer .dateContainer .dateItem.selected {
   background: #E44E52;
 
@@ -406,7 +410,7 @@ html {
 }
 
 .instructionsRow ul.instructionsList {
-  list-style-type: decimal;
+  list-style-type: disc;
   /* Numaralı liste için */
   overflow-wrap: break-word;
   /* Taşarsa alt satıra geçmesini sağlar */
@@ -421,6 +425,11 @@ html {
   font-weight: 400;
   line-height: 145%;
   /* 33.35px */
+}
+
+
+.instructionsRow .instructionsText{
+  margin-bottom: 16px;
 }
 
 .checkoutContainer {

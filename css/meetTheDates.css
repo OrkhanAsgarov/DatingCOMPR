@@ -69,6 +69,19 @@ html {
   filter: grayscale(0%);
 }
 
+.yearbookContainer .content span{
+  color: #3C4754;
+text-align: center;
+
+/* Zilla Body Small */
+font-family: "Zilla Slab";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 28px */
+letter-spacing: 0.2px;  
+}
+
 .yearbookContainer .content .noPicture {
   width: 222px;
   height: 293px;
@@ -95,10 +108,13 @@ html {
   position: absolute;
   right: 16px;
   top: 16px;
-  background: url("../icons/XButton.svg") no-repeat center center;
+  background: url("../icons/x-solid.svg") no-repeat center center;
   width: 48px;
   height: 48px;
   cursor: pointer;
+  background-color: #FFF6C9;
+    border-radius: 50%;
+    background-size: 20px;
 }
 
 .selectedRow .xButton.mobileView {
@@ -213,6 +229,22 @@ html {
   position: relative;
   gap: 10px;
   overflow-y: scroll;
+}
+
+.recentNotes::-webkit-scrollbar {
+  width: 24px; /* Scroll bar genişliği */
+}
+
+.recentNotes::-webkit-scrollbar-thumb {
+  
+  border: 8px solid transparent;
+  
+}
+
+.recentNotes::-webkit-scrollbar-thumb {
+  background-color:rgba(121, 99, 46, 0.30); /* Scroll bar rengi */
+  border-radius: 50px;
+  background-clip: content-box; /* İçerik kutusu ile uyumlu */
 }
 
 .recentNotes span {

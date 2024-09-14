@@ -34,9 +34,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let videos = [
     {
-      "name": "Daniel",
-      "file": "daniel.mov",
+      "name": "vSpencer",
+      "file": "vspencer.mp4",
       "location": "Millburn, New Jersey",
+      "age": "33",
       "comments": [
         "SingleGal1990: OMG Bliss is adorable. If she’s single, there’s really no hope for me.",
         "JustBeinMe: @SingleGal1990 Facts.",
@@ -48,28 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "name": "Hollis",
       "file": "hollis.mov",
       "location": "Millburn, New Jersey",
-      "comments": [
-        "SingleGal1990: OMG Bliss is adorable. If she’s single, there’s really no hope for me.",
-        "JustBeinMe: @SingleGal1990 Facts.",
-        "ARTthrob: I meeeeean... I’d date her.",
-        "GanchasaurausFlex: Adorbs"
-      ]
-    },
-    {
-      "name": "Kendrick",
-      "file": "kendrick.mov",
-      "location": "Millburn, New Jersey",
-      "comments": [
-        "SingleGal1990: OMG Bliss is adorable. If she’s single, there’s really no hope for me.",
-        "JustBeinMe: @SingleGal1990 Facts.",
-        "ARTthrob: I meeeeean... I’d date her.",
-        "GanchasaurausFlex: Adorbs"
-      ]
-    },
-    {
-      "name": "Lauryn",
-      "file": "lauryn.mp4",
-      "location": "Millburn, New Jersey",
+      "age": "36",
       "comments": [
         "SingleGal1990: OMG Bliss is adorable. If she’s single, there’s really no hope for me.",
         "JustBeinMe: @SingleGal1990 Facts.",
@@ -81,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "name": "Rick",
       "file": "rick.mov",
       "location": "Millburn, New Jersey",
+      "age": "30",
       "comments": [
         "SingleGal1990: OMG Bliss is adorable. If she’s single, there’s really no hope for me.",
         "JustBeinMe: @SingleGal1990 Facts.",
@@ -88,10 +69,12 @@ document.addEventListener("DOMContentLoaded", function() {
         "GanchasaurausFlex: Adorbs"
       ]
     },
+    
     {
       "name": "Sam",
       "file": "sam.mp4",
       "location": "Millburn, New Jersey",
+      "age": "30",
       "comments": [
         "SingleGal1990: OMG Bliss is adorable. If she’s single, there’s really no hope for me.",
         "JustBeinMe: @SingleGal1990 Facts.",
@@ -100,9 +83,35 @@ document.addEventListener("DOMContentLoaded", function() {
       ]
     },
     {
-      "name": "vSpencer",
-      "file": "vspencer.mp4",
+      "name": "Lauryn",
+      "file": "lauryn.mp4",
       "location": "Millburn, New Jersey",
+      "age": "28",
+      "comments": [
+        "SingleGal1990: OMG Bliss is adorable. If she’s single, there’s really no hope for me.",
+        "JustBeinMe: @SingleGal1990 Facts.",
+        "ARTthrob: I meeeeean... I’d date her.",
+        "GanchasaurausFlex: Adorbs"
+      ]
+    },
+    {
+      "name": "Daniel",
+      "file": "daniel.mov",
+      "location": "Millburn, New Jersey",
+      "age": "34",
+      "comments": [
+        "SingleGal1990: OMG Bliss is adorable. If she’s single, there’s really no hope for me.",
+        "JustBeinMe: @SingleGal1990 Facts.",
+        "ARTthrob: I meeeeean... I’d date her.",
+        "GanchasaurausFlex: Adorbs"
+      ]
+    },
+    
+    {
+      "name": "Kendrick",
+      "file": "kendrick.mov",
+      "location": "Millburn, New Jersey",
+      "age": "37",
       "comments": [
         "SingleGal1990: OMG Bliss is adorable. If she’s single, there’s really no hope for me.",
         "JustBeinMe: @SingleGal1990 Facts.",
@@ -136,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
             xButton.classList.add("mobileView");
           }
 
-          videoTitle.textContent = videoData.name.toUpperCase() + ", " + videoData.location;
+          videoTitle.textContent = videoData.name.toUpperCase() + ", " + videoData.age;
           videoText.textContent = videoData.location;
 
           displayComments(videoData.comments);
@@ -172,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const videoData = videos[currentVideoIndex];
       videoElement.src = `/video/meetTheDates/${videoData.file}`;
       videoElement.parentElement.load();
-      videoTitle.textContent = videoData.name.toUpperCase() + ", " + videoData.location;
+      videoTitle.textContent = videoData.name.toUpperCase() + ", " + videoData.age;
       videoText.textContent = videoData.location;
       displayComments(videoData.comments);
     }
@@ -184,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const videoData = videos[currentVideoIndex];
       videoElement.src = `/video/meetTheDates/${videoData.file}`;
       videoElement.parentElement.load();
-      videoTitle.textContent = videoData.name.toUpperCase() + ", " + videoData.location;
+      videoTitle.textContent = videoData.name.toUpperCase() + ", " + videoData.age;
       videoText.textContent = videoData.location;
       displayComments(videoData.comments);
     }

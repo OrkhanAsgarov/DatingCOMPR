@@ -201,6 +201,8 @@ document.addEventListener('DOMContentLoaded', function() {
           this.classList.add('selected');
       });
   });
+
+  
 });
 
 // Seçim butonlarına tıklama işlevi ekleme
