@@ -154,7 +154,7 @@ footer nav ul li a {
 
 @media only screen and (max-width: 750px) {
   .mainHeader {
-    padding: 27px 24px 0;
+    padding: 27px 16px 0;
     width: 100%;
     justify-content: center;
   }
@@ -178,7 +178,7 @@ footer nav ul li a {
   
 
   footer {
-    padding: 0 24px 48px;
+    padding: 0 16px 48px;
   } 
 
   footer nav {
