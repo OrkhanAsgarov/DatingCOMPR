@@ -76,3 +76,5 @@ function showSlides(n) {
 function getRandomRotation() {
   return Math.floor(Math.random() * 7) - 3; // Random degree between -3 and 3
 }
+
+

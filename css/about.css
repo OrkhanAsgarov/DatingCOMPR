@@ -4,6 +4,10 @@
   background: #fff;
 }
 
+.mainHeader h1 a {
+  color: #204165;
+}
+
 main {
   width: 100%;
   display: flex;
@@ -11,6 +15,8 @@ main {
   justify-content: center;
   overflow: hidden;
 }
+
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -27,18 +33,26 @@ main {
   width: 855.115px;
   height: 600px;
   flex-shrink: 0;
-  background: url("/images/about/IndexCardsCropped1.png") no-repeat center
-    center;
-  background-size: cover;
+  
   position: relative;
   transition: transform 0.3s ease;
 }
 
+.mySlides img {
+  display: inline;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .arrowDiv {
   width: 60px;
+  height: 60px;
   margin: 0;
   padding: 0;
 }
+
+
 
 /* Next & previous buttons */
 .prev,
@@ -49,13 +63,23 @@ main {
   transition: 0.6s ease;
   border-radius: 50%;
   user-select: none;
-  background-color: #029d7e;
+  background: rgba(202, 222, 247, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.prev,
+.prev i, .next i {
+  color: #204165;
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .prev,
 .leftHome {
   background: url("/icons/LeftArrowForSlayd.svg") no-repeat center center;
 }
@@ -63,13 +87,16 @@ main {
 .next,
 .rightHome {
   background: url("/icons/RightArrowForSlayd.svg") no-repeat center center;
-}
+} */
 
 /* Disabled button styles */
 .prev.disabled,
 .next.disabled {
-  background-color: #029d7e;
+  background-color: #029D7E;
   pointer-events: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
 .mySlides .numbertext {
@@ -80,8 +107,8 @@ main {
   font-weight: 400;
   line-height: 145%; /* 60.9px */
   position: absolute;
-  top: 53px;
-  left: 67px;
+  top: 77px;
+  left: 95px;
   transition: transform 0.3s ease;
   transform: rotate(-2deg);
 }
@@ -96,7 +123,7 @@ main {
   font-weight: 400;
   line-height: 145%; /* 33.35px */
   position: absolute;
-  top: 112px;
+  top: 148px;
   left: 50%;
   transform: translateX(-50%) rotate(-2deg);
   text-align: start;
@@ -115,16 +142,17 @@ main {
   display: none;
 }
 
-
+footer nav ul {
+  width: 748px;
+}
 
 @media only screen and (max-width: 750px) {
   .container {
     position: relative;
+    justify-content: unset;
   }
 
-  .mainHeader h1 {
-    width: 305px;
-  }
+  
 
   main {
     width: 100%;
@@ -136,7 +164,7 @@ main {
 
   .slideshow-container {
     width: 100%;
-    height: 100%;
+    height: 680px;
   }
 
   .arrowDiv {
@@ -144,13 +172,15 @@ main {
   }
 
   .mySlides {
-    width: 460px;
+    width: 110%;
     height: 640px;
     position: absolute;
     top: -60px;
-    background: url(/images/about/iStockMobil462x640.png) no-repeat center
+    background: url(/images/about/iStockMobil.png) no-repeat center
       center;
+      background: none;
   }
+  
 
   .mySlides .numbertext {
     width: 320px;
@@ -167,19 +197,21 @@ main {
     height: 281.37px;
     font-size: 20px;
     line-height: 155%; /* 31px */
-    top: 150px;
+    top: 172px;
   }
 
   .mobileSlideButton {
     position: absolute;
-    width: 305.505px;
+    width: 100%;
     height: 60px;
+    padding: 0 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     left: 50%;
-    bottom: 25px;
+    bottom: 50px;
     transform: translate(-50%, -50%);
+
   }
 
   .mobilArrow {
@@ -201,16 +233,23 @@ main {
   .leftHome,
   .rightHome {
     display: none;
-    background-color: #029d7e;
+    background-color: #029D7E;
     height: 60px;
     width: 60px;
+    border-radius: 50%;
   }
 
-  /* Mobil görünümde disabled buton */
-  .leftHome.disabled,
-  .rightHome.disabled {
-    background-color: #029d7e;
-  }
+  .leftHome i, .rightHome i {
+    color: #E3FCF8;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  
 
   .prev,
   .next {
@@ -219,130 +258,30 @@ main {
 
   footer {
     z-index: 55;
+    width: 100%;
+    position: absolute;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 24px;
   }
+
+  footer nav {width: 100%;}
 
   footer nav ul {
     justify-content: space-between;
     margin: 0;
-    width: 305.505px;
-    margin-bottom: 24px;
+    width: 100%;
+    margin-bottom: 0;
   }
 
 
 }
 
-/* @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+
+/* 411px ve altındaki ekran boyutları için stil */
+@media only screen and (max-width: 411px) {
+  .slideshow-container {
+    height: 590px;
+  }
 }
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-} */
-
-/* @media only screen and (max-width: 750px) {
-
-  .container {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .mainHeader {
-    width: 159.615px;
-    height: 50px;
-    padding: 0;
-   
-  }
-
-  .mainHeader h1 {
-    margin: 0;
-    height: 100%;
-    width: 160px;
-  }
-
-  .mainHeader h1 a {
-    font-size: 16px;
-  }
-  .homeDiv {
-    display: none;
-  }
-  .home {
-    display: none;
-  }
-
-  main {
-    position: absolute;
-    top: 18px;
-  }
-
-
- .slideshow-container {
-  width: 462.189px;
-  height: 639.856px;
- }
-
-
- .mySlides{
-  background: url('/images/about/iStock.png') no-repeat center center;
-  background-size: cover;
-  width: 462.189px;
-  height: 639.856px;
-  position: absolute;
-  top: 29.16px; 
-  left: -36.73px; 
-  transform-origin: 0 0;
- }
-
- 
-
- .arrowDiv {
-  z-index: 15;
-}
-
-  .prevDiv {
-    position: absolute;
-    left:24px;
-    bottom: 65px;
-  }
-
-  .nextDiv {
-    position: absolute;
-    right:24px;
-    bottom: 65px;
-  }
-
-  .mySlides .numbertext {
-    width: 360.509px;
-height: 52.564px;
-font-size: 46px;
-top: 80px;
-left: 70px;
-text-align: start;
-  }
-
-  .mySlides .slideText {
-    width: 305.505px;
-  height: 281.37px;
-  font-size: 20px;
-  line-height: 155%;
-   }
-
-  footer {
-    z-index: 55;
-    padding: 0;
-  }
-
-  footer nav ul {
-    display: flex;
-    align-items: flex-start;
-    gap: 51px;
-    width: 326px;
-    height: 15px;
-    padding: 0px 6.398px 24px 6.399px;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-
-} */
