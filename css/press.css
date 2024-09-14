@@ -208,6 +208,10 @@ main {
   background: url("/icons/RightArrowForSlayd.svg") no-repeat center center;
 }
 
+.mobilArrow {
+  display: none;
+}
+
 
 @media only screen and (max-width:750px) {
 
@@ -335,7 +339,8 @@ main {
   }
 
   .mobilArrow {
-    width: 346px;
+    width: 100%;
+    padding: 0 16px;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -351,8 +356,22 @@ main {
     
   }
 
+  .leftHome i{
+    color: #E3FCF8;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer{
+    width: 100%;
+  }
+
   footer nav ul {
-    width: 346px;
+    width: 100%;
 }
 
 

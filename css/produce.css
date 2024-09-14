@@ -3,11 +3,16 @@
   /* overflow-x: hidden; */
 }
 
+.mainHeader h1 a {
+  color: #204165;
+}
+
 main {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .calculator-container {
@@ -116,13 +121,11 @@ main {
     justify-content:start;
     overflow-x: hidden;
   }
-  .mainHeader {
-    padding: 0;
-    width: 100%;
-    justify-content: start;
-    margin-bottom: 32px;
-    margin-left: 24px;
+
+  main{
+    margin-top: 32px;
   }
+  
 
   .calculator-container {
     width: 360px;
@@ -186,11 +189,12 @@ main {
   }
 
    .mobilArrow {
-    width: 100px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: left;
-    margin: 24px;
+    margin: 24px 0 28px;
+    padding: 0 16px;
   }
 
   .leftHome{
@@ -202,20 +206,22 @@ main {
     
   }
 
+  .leftHome i {
+    color: #E3FCF8;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
   footer {
-   
-    margin: 0 18px;
-    box-sizing: border-box;
+   width: 100%;
   }
 
    footer nav {
     width: 100%;
-    box-sizing: border-box;
   }
 
-  footer nav ul {
-    width: 100%;
-    padding: 0 6.4px;
-    box-sizing: border-box;
-  }
 }
