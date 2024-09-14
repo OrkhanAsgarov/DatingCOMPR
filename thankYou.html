@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dating Comprehension</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gaegu&family=Inter:wght@400;600&family=Zilla+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/thankYou.css" />
+  </head>
+  <body>
+    <div class="container blueMode">
+      <main>
+        <div class="thankYouContainer">
+          <div class="mainBox">
+            <h1 class="mainTitle">TEST COMPLETE!</h1>
+            <div class="mainContent">
+              <span class="message-text">(don’t)</span>
+              <div class="stop-sign">
+                <img src="/icons/Polygon3.svg" alt="">
+                <span >STOP</span>
+              </div>
+              <span class="message-text">(believin’)</span>
+            </div>
+          </div>
+
+          <div class="nextShowContainer">
+            <img
+              src="/images/showHome/Polygon1.svg"
+              alt="notes"
+              class="notesIcon blueMode active"
+            />
+            <img
+              src="/images/showHome/Polygon1Pink.svg"
+              alt="notes"
+              class="notesIcon pinkMode"
+            />
+            <div class="notesLabel">notes</div>
+            
+            <span class="thanks-message">Thanks for coming to <br> the show!</span>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      setTimeout(function() {
+      document.querySelectorAll('.message-text').forEach(function(element) {
+        element.style.display = 'inline';
+      });
+      }, 2000);
+    </script>
+    <!-- <script src="/js/showHome.js"></script> -->
+  </body>
+</html>

@@ -109,10 +109,10 @@ html {
 
 .selectedRow .backVideoBtn,
 .selectedRow .nextVideoBtn {
-  display: inline-block;
+  display: none;
   position: absolute;
   left: 15px;
-  bottom: 24px;
+  bottom: 20px;
   background: url("../icons/backVideoBtn.svg") no-repeat center center;
   width: 60px;
   height: 60px;
@@ -368,6 +368,11 @@ html {
     margin: 0;
   }
 
+  .selectedRow .backVideoBtn,
+.selectedRow .nextVideoBtn {
+  display: inline-block;
+}
+
   .sectionContainer .sectionRow {
     width: 348px;
     margin-bottom: 0;
@@ -447,7 +452,7 @@ html {
     flex-direction: column;
     width: 343px;
     height: auto;
-    margin-bottom: 0;
+    margin-bottom: 60px;
   }
 
   .recentContainer {

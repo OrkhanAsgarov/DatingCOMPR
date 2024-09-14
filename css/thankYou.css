@@ -1,0 +1,301 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.thankYouContainer {
+  width: 741px;
+  height: 774px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainBox {
+  width: 712px;
+  height: 566px;
+  margin: 0;
+  border: 2px solid;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.mainTitle {
+  width: 100%;
+  text-align: center;
+  font-size: 56px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 700;
+  letter-spacing: 1.68px;
+  padding: 89px 0 69px;
+  line-height: 61.6px;
+  word-wrap: break-word;
+  border-bottom: 2px solid #204165;
+}
+
+.mainContent{
+  width: 100%;
+  height: 345px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.mainContent .message-text{
+  display: none;
+  color: #204165;
+text-align: center;
+font-family: Gaegu;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 39.2px */
+}
+
+.stop-sign {
+  width: 230px;
+  height: 230px;
+  background-color: #1a3559;
+  position: relative;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.stop-sign img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+}
+
+.stop-sign span {
+  color: #FFF;
+font-family: Inter;
+font-size: 60px;
+font-style: normal;
+font-weight: 800;
+line-height: 150%; /* 90px */
+letter-spacing: 0.6px;
+}
+
+
+.nextShowContainer {
+  width: 712px;
+  height: 100%;
+  margin: 0;
+  margin-bottom: 46px;
+  border: 2px solid;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 42px 0 32px;
+}
+
+.notesIcon {
+  display: none;
+}
+
+.notesIcon.active {
+  display: block;
+  position: absolute;
+  width: 90px;
+  height: 45px;
+  top: -2px;
+  left: -23px;
+  background: transparent;
+}
+
+.notesLabel {
+  position: absolute;
+  width: 39px;
+  height: 22px;
+  color: #f1f3f3;
+  font-size: 16px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 500;
+  line-height: 22.4px;
+  word-wrap: break-word;
+  top: 4px;
+  left: -7px;
+  transform: rotate(-45deg);
+}
+
+.nextShowLabel {
+  width: 216px;
+  height: 33.5px;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 500;
+}
+
+.nextShowTime {
+  width: 424px;
+  height: 33px;
+  text-align: center;
+  font-size: 23px;
+  font-family: "Gaegu", serif;
+  font-weight: 400;
+  line-height: 33.35px;
+  word-wrap: break-word;
+}
+
+.nextShowContainer .thanks-message{
+  color: #204165;
+text-align: center;
+font-family: "Zilla Slab";
+font-size: 48px;
+font-style: normal;
+font-weight: 500;
+line-height: 110%; /* 52.8px */
+letter-spacing: 1.44px;
+}
+
+/* .showStart, .showStartlink{
+  color: #E44E52;
+text-align: center;
+
+font-family: "Zilla Slab";
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: 130%; 
+}
+
+.showStartlink{
+  text-decoration: underline;
+  color: #E44E52;
+} */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.showStartlink {
+  animation: blink 4s infinite;
+}
+
+.showStartlink{
+  color: #204165;
+text-align: center;
+
+/* Zilla Header 1 */
+font-family: "Zilla Slab";
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; /* 61.6px */
+letter-spacing: 1.68px;
+text-decoration-line: underline;
+}
+
+
+
+
+@media screen and (max-width: 750px) {
+  
+main{width: 100%;}
+  .thankYouContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+  }
+
+
+
+  .mainBox {
+    width: 95%;
+    height: 446px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+
+  .mainContent {
+    gap: 0;
+    justify-content: space-evenly;
+}
+
+  .mainTitle {
+    font-size: 36px;
+    line-height: 41.4px;
+    letter-spacing: 1.08px;
+    padding: 30px 0 20px;
+  }
+
+  .mainContent .message-text {
+    font-size: 16px;
+}
+
+.stop-sign {
+  width: 180px;
+  height: 180px;
+}
+.stop-sign span {
+  font-size: 45px;
+}
+
+  
+  .nextShowContainer {
+    width: 95%;
+    height: 112px;
+    padding: 21px 0 22px;
+    box-sizing: border-box;
+    margin-bottom: 37px;
+    gap: 1px;
+  }
+
+  .nextShowLabel,
+  .nextShowTime {
+    width: 193px;
+    font-size: 19px;
+    font-family: Gaegu;
+    font-weight: 400;
+    line-height: 23.18px;
+    letter-spacing: 0.19px;
+    word-wrap: break-word;
+    height: auto;
+  }
+
+  .showStart, .showStartlink{
+
+  
+  /* Zilla Header 3 */
+  font-family: "Gaegu";
+  
+  font-weight: 700;
+  line-height: 110%; /* 46.8px */
+  }
+  
+  .showStartlink{
+    text-decoration: none;
+    
+  }
+
+  .nextShowContainer .thanks-message {
+    font-size: 25px;
+  }
+
+
+  
+  
+}
