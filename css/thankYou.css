@@ -111,8 +111,8 @@ letter-spacing: 0.6px;
 .notesIcon.active {
   display: block;
   position: absolute;
-  width: 90px;
-  height: 45px;
+  width: 100px;
+  height: 60px;
   top: -2px;
   left: -23px;
   background: transparent;
@@ -128,8 +128,8 @@ letter-spacing: 0.6px;
   font-weight: 500;
   line-height: 22.4px;
   word-wrap: break-word;
-  top: 4px;
-  left: -7px;
+  top: 7px;
+  left: -4px;
   transform: rotate(-45deg);
 }
 

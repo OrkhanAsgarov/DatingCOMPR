@@ -39,6 +39,7 @@ html {
   width: 17px;
   height: 17px;
   background: url("/icons/buytickets/closeDateRedMobile.svg") no-repeat center center;
+  background-size: contain;
 }
 
 .mobileDateTime .selectedMobileDate {
@@ -79,7 +80,7 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
-  /* 39.6px */
+  border: 1px solid rgba(228, 78, 82, 0.95);
 }
 
 .mobileDateTime .hourContainer .hour.selected {

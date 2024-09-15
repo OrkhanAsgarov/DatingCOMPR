@@ -54,7 +54,7 @@ main {
 
 .quizResult-container .quizResult-title {
   margin-bottom: 164px;
-  margin-top: 150px;
+  margin-top: 100px;
   color: #E3FCF8;
 text-align: center;
 font-size: 42px;
@@ -88,12 +88,25 @@ line-height: 110%; /* 79.2px */
 
 @media screen and (max-width: 750px) {
 
-/* 
-  .sectionContainer {
-    width: 100%;
-    padding: 0 7px;
-    gap: 7.5px;
-    margin-bottom: 32px;
-  } */
+  .quizResult-container .quizResult-title {
+    margin-bottom: 80px;
+    margin-top: 80px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 145%;
+  }
+
+  .animate-gift {
+    width: 650px;
+    height: 460px;
+}
+
+  .quizResult-container .result-couple, .quizResult-container .couple-and {
+    
+    font-size: 36px;
+  }
+
+
 
 }

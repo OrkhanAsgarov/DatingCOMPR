@@ -16,35 +16,7 @@ html {
 }
 
 
-.leftMenu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 156px;
-  height: 252px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: fixed;
-  left: 32px;
-  bottom: 60px;
-}
 
-.menuItem {
-  width: 160px;
-  height: 42px;
-  font-size: 16px;
-  font-family: Inter, sans-serif;
-  font-weight: 600;
-  line-height: 22.4px;
-  letter-spacing: 1.44px;
-  word-wrap: break-word;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  cursor: pointer;
-}
 
 .sectionContainer {
   display: flex;
